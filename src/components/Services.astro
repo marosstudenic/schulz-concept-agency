@@ -1,0 +1,55 @@
+---
+import ServiceItem from "./ServiceItem.astro";
+interface ServiceItemType {
+    title: string;
+    description: string;
+}
+const services: Array<ServiceItemType> = [
+    {
+        title: "Branding",
+        description: "Brand identita / Tvorba loga / Názov značky / Rebranding / Brand audit"
+    },
+    {
+        title: "Marketing",
+        description: "Marketingové stratégie / Sociálne siete / Spolupráce s influencermi / SEO / PPC  / Copywriting"
+    },
+    {
+        title: "Web development",
+        description: "Web na mieru / E-shop / SEO / Optimalizácia / Wordpress  / WooComerce  / Platobné brány"
+    },
+    {
+        title: "Aplikácie",
+        description: "Webové a mobilné aplikácie / Vývoj a tvorba / Systémy na mieru / CRM / App store SEO / Testovanie"
+    },
+    {
+        title: "UI / UX",
+        description: "Wireframe / Prototyp / IA"
+    },
+    {
+        title: "Grafický design",
+        description: "Tlačená grafika / Vizuálna identita / Logo / Plagáty / Ilustrácie / Animácie / 3D"
+    },
+    {
+        title: "Merch",
+        description: "Potlač textilu / Doplnky / Balenie / Celoplošný potlač / Návrh vzorov na látku"
+    },
+    {
+        title: "SCHARFYN",
+        description: "Autorská tlač / Saténové šatky "
+    },
+    {
+        title: "Naše know-how",
+        description: "Zadarmo / E-book  / Newsletter"
+    }
+]
+
+---
+
+<section class="bg-white rounded-[60px] container px-12 mx-auto py-16 my-12">
+    <p class="text-left uppercase text-black/50 py-4">SLUŽBY</p>
+    <div class="grid grid-cols-2 gap-8 justify-between">
+        {services.map((item, index) =>
+            <ServiceItem {...item} index={index + 1} class="w-1/2"/>
+        )}
+    </div>
+</section>
