@@ -1,0 +1,77 @@
+---
+import PortfolioItem from "./Portfolio/PortfolioItem.astro";
+
+
+type PortfolioItemType = {
+    title: string,
+    description: string,
+    img: string,
+}
+
+const items : Array<PortfolioItemType> = [
+    {
+        title: "Vinařství u Nešporů",
+        description: "Logomanuál / Balenie /  Vizitky / Potlač na auto / Etikety",
+        img: "assets/images/sauvignon-1.png"
+    },
+    {
+        title: "Nasdomov.sk katalog",
+        description: "Webová stránka",
+        img: "assets/images/macbook-pro-mockup-light-1.png"
+    },
+    {
+        title: "SEAWEED",
+        description: "Mobilní aplikace / Etikety",
+        img: "assets/images/seaweed.png"
+    },
+    {
+        title: "Výstava Identity",
+        description: "Plagáty / Pozvánky / Vstupenky / Letáčky / Tašky / Samolepky",
+        img: "assets/images/identity.png"
+    },
+    {
+        title: "Design na hranici",
+        description: "Plakáty / Vstupenky / Merch / Letáčky / Tašky / Samolepky",
+        img: "assets/images/na-hranici.jpeg"
+    },
+    {
+        title: "Jesličky",
+        description: "Webová stránka / Cedulky na dveře / Vizitky / Hlavičkový papír / Logo / Sociální sítě",
+        img: "assets/images/jeslicky.png"
+    }
+]
+---
+<div class="flex flex-col justify-center items-center gap-2 container mx-auto bg-white rounded-3xl py-16 px-12">
+    <p class="text-xl text-left uppercase text-black/50 w-full mb-10">NAŠE PRÁCE</p>
+    <div class="grid grid-cols-2 justify-between gap-10">
+        {items.map((item, index) => (
+            <PortfolioItem title={item.title} description={item.description} img={item.img} index={index}/>
+        ))}
+
+    </div>
+    <div class="mt-40 mb-10">
+        <p class="text-xl text-center text-black/50">ĎALEJ NA</p>
+
+        <a class="cursor-pointer" href="/portfolio">
+            <p class="text-2xl text-center uppercase text-black pt-4">
+                Zobraziť viac
+            </p>
+            <svg
+                    width="185"
+                    height="18"
+                    viewBox="0 0 185 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class=""
+                    preserveAspectRatio="none"
+            >
+                <path
+                        d="M0.5 11.0588C71.7147 4.37113 111.931 2.25282 184.5 2C132.527 6.74663 103.82 9.48176 62.1268 16C87.4849 14.483 101.588 13.9057 125.514 16"
+                        stroke="#000AFF"
+                        stroke-width="3"
+                ></path>
+            </svg>
+        </a>
+
+    </div>
+</div>
