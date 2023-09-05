@@ -1,0 +1,21 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    side: string;
+}
+
+const {title, description, side} = Astro.props;
+
+const sideClass = side === 'left' ? 'text-left' : 'text-right';
+---
+
+<div class=`w-full ${sideClass}`>
+    <p>
+                <span class="text-[#0732fe]  font-semibold uppercase tracking-wide">
+                    {title}<br/></span>
+        <span class="text-black font-normal tracking-wide">
+            {description}
+        </span>
+    </p>
+</div>
