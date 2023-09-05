@@ -73,8 +73,8 @@ const faqs : Array<Faq> =  [
     <p class="text-xl text-left uppercase text-white/50 mb-8">FAQ</p>
     <div class="questions w-1/2 mx-auto">
         <div class="accordion">
-            {faqs.map((faq, index) => (
-                <div class="accordion-item">
+            {faqs.map((faq, index) => {
+                return <div class="accordion-item">
                     <p class="accordion-link text-white text-lg font-normal leading-10 tracking-wide" data-target=`accordion-${index}`>
                         {faq.question}
                     </p>
@@ -83,10 +83,11 @@ const faqs : Array<Faq> =  [
                     </div>
                     <hr class="border-white/50 my-4" />
                 </div>
-            ))}
+            })}
         </div>
     </div>
 </section>
+
 
 <script>
     Array.from(document.getElementsByClassName('accordion-link')).forEach((item) => {
