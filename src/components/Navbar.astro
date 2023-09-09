@@ -5,31 +5,31 @@
         <img src="assets/logos/small-logo.svg" alt="logo schulz concept"/>
 
         <div class="flex-grow gap-10 justify-center hidden lg:flex">
-            <p
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white"
+            <a
+                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#services"
             >
                 služby
-            </p>
-            <p
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white"
+            </a>
+            <a
+                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#portfolio"
             >
                 naše práce
-            </p>
-            <p
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white"
+            </a>
+            <a
+                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#about"
             >
                 Naša cesta
-            </p>
-            <p
-                class="flex-grow-0 flex-shrink-0 text-xl text-center capitalize text-white"
-            >
-                SCHARFYN
-            </p>
-            <p
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white"
+            </a>
+            <!--<p-->
+            <!--    class="flex-grow-0 flex-shrink-0 text-xl text-center capitalize text-white"-->
+            <!--&gt;-->
+            <!--    SCHARFYN-->
+            <!--</p>-->
+            <a
+                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#contact"
             >
                 Kontakt
-            </p>
+            </a>
         </div>
 
         <div class="hamburger lg:hidden z-50" id="nav-button">
@@ -60,14 +60,19 @@
     
 </nav>
 
-<div class="mobile-menu-content fixed top-0 left-0 w-full h-full bg-dark-600 z-20 flex flex-col justify-center position-relative hidden">
-    <ul class="w-1/2 mx-auto text-white text-4xl">
-        <li class="my-12 hover:scale-125"><a class="bg-blue-900 hover:bg-pink-400 hover:scale-150 py-2 px-8 cursor-pointer uppercase inline" data-text="Služby">Služby</a></li>
-        <li class="my-12 hover:scale-125"><a class="bg-blue-900 hover:bg-pink-400 hover:scale-150 py-2 px-8 cursor-pointer uppercase inline" data-text="Naše práce">Naše práce</a></li>
-        <li class="my-12 hover:scale-125"><a class="bg-blue-900 hover:bg-pink-400 hover:scale-150 py-2 px-8 cursor-pointer uppercase inline" data-text="Naša cesta">Naša cesta</a></li>
-        <li class="my-12 hover:scale-125"><a class="bg-blue-900 hover:bg-pink-400 hover:scale-150 py-2 px-8 cursor-pointer uppercase inline" data-text="Schafryn">Schafryn</a></li>
-        <li class="my-12 hover:scale-125"><a class="bg-blue-900 hover:bg-pink-400 hover:scale-150 py-2 px-8 cursor-pointer uppercase inline" data-text="Kontakt">Kontakt</a></li>
+<div class="mobile-menu-content fixed top-0 left-0 w-[100vw] h-[100vh] bg-dark-600 z-20 flex flex-col justify-center position-relative translate-x-full transition overflow-x-hidden">
+    <ul class="w-full mx-auto text-white text-4xl px-4">
+        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Služby">Služby</a></li>
+        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Naše práce">Naše práce</a></li>
+        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Naša cesta">Naša cesta</a></li>
+        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Schafryn">Schafryn</a></li>
+        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Kontakt">Kontakt</a></li>
     </ul>
+
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-white text-[100px] opacity-5 text-center font-bold">
+        <p>SCHULZ</p>
+        <p>CONCEPT</p>
+    </div>
 </div>
 
 <style>
@@ -116,7 +121,7 @@
 
     ul, li, a {
         transition: ease 0.5s;
-        letter-spacing: 10px;
+        letter-spacing: 6px;
     }
     ul:has(li:hover) li a {
         opacity: 0;
@@ -126,20 +131,7 @@
         opacity: 1 !important;
     }
 
-    ul li a::before {
-        content: attr(data-text);
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        font-size: 4em;
-        font-weight: 700;
-        transform: translate(-50%, -50%);
-        pointer-events: none;
-        opacity: 0;
-        letter-spacing: 200px;
-        transition: 0.5s;
-        white-space: nowrap;
-    }
+
 
     ul li:hover a::before {
         opacity: 0.05;
@@ -149,14 +141,18 @@
 </style>
 
 <script>
-    document.getElementById('nav-button').addEventListener('click', function() {
-        document.querySelector('.mobile-menu-content').classList.toggle('hidden');
+    const toggleMenu = () => {
+        document.querySelector('.mobile-menu-content').classList.toggle('translate-x-full');
         document.querySelector('#ham-icon').classList.toggle('active');
+        document.querySelector('body').classList.toggle("fixed");
+    }
+
+    document.getElementById('nav-button').addEventListener('click', function() {
+        toggleMenu();
     })
 
     document.getElementsByClassName('mobile-menu-content')[0].addEventListener('click', function() {
-        document.querySelector('.mobile-menu-content').classList.toggle('hidden');
-        document.querySelector('#ham-icon').classList.toggle('active');
+        toggleMenu();
     })
 
 </script>

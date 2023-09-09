@@ -41,7 +41,7 @@ const items : Array<PortfolioItemType> = [
     }
 ]
 ---
-<div class="flex flex-col justify-center items-center gap-2 container mx-auto bg-white rounded-3xl py-8 lg:py-16  px-4 lg:px-12">
+<section class="flex flex-col justify-center items-center gap-2 container mx-auto bg-white rounded-3xl py-8 lg:py-16  px-4 lg:px-12" id="portfolio">
     <p class="text-center lg:text-left uppercase text-black/50 w-full mb-10">NAŠE PRÁCE</p>
     <div class="grid grid-cols-1 lg:grid-cols-2 justify-between gap-10">
         {items.map((item, index) => (
@@ -49,29 +49,29 @@ const items : Array<PortfolioItemType> = [
         ))}
 
     </div>
-    <div class="mt-40 mb-10">
-        <p class="text-xl text-center text-black/50">ĎALEJ NA</p>
+    <!--<div class="mt-40 mb-10">-->
+    <!--    <p class="text-xl text-center text-black/50">ĎALEJ NA</p>-->
 
-        <a class="cursor-pointer" href="/portfolio">
-            <p class="text-2xl text-center uppercase text-black pt-4">
-                Zobraziť viac
-            </p>
-            <svg
-                    width="185"
-                    height="18"
-                    viewBox="0 0 185 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class=""
-                    preserveAspectRatio="none"
-            >
-                <path
-                        d="M0.5 11.0588C71.7147 4.37113 111.931 2.25282 184.5 2C132.527 6.74663 103.82 9.48176 62.1268 16C87.4849 14.483 101.588 13.9057 125.514 16"
-                        stroke="#000AFF"
-                        stroke-width="3"
-                ></path>
-            </svg>
-        </a>
+    <!--    <a class="cursor-pointer" href="/portfolio">-->
+    <!--        <p class="text-2xl text-center uppercase text-black pt-4">-->
+    <!--            Zobraziť viac-->
+    <!--        </p>-->
+    <!--        <svg-->
+    <!--                width="185"-->
+    <!--                height="18"-->
+    <!--                viewBox="0 0 185 18"-->
+    <!--                fill="none"-->
+    <!--                xmlns="http://www.w3.org/2000/svg"-->
+    <!--                class=""-->
+    <!--                preserveAspectRatio="none"-->
+    <!--        >-->
+    <!--            <path-->
+    <!--                    d="M0.5 11.0588C71.7147 4.37113 111.931 2.25282 184.5 2C132.527 6.74663 103.82 9.48176 62.1268 16C87.4849 14.483 101.588 13.9057 125.514 16"-->
+    <!--                    stroke="#000AFF"-->
+    <!--                    stroke-width="3"-->
+    <!--            ></path>-->
+    <!--        </svg>-->
+    <!--    </a>-->
 
-    </div>
-</div>
+    <!--</div>-->
+</section>

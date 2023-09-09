@@ -23,7 +23,7 @@ const faqs : Array<Faq> =  [
     },
     {
         question: "Kto bude vlastniť autorské práva?",
-        answer: "Všetky autorské práva budú patriť Vám."
+        answer: "Zákon nám nedovoluje preniesť autorské práva, ale vy budete vlastniť výhradnú licenciu na používanie."
     },
     {
         question: "Neviem, čo presne potrebujem. Dokážete mi poradiť?",
@@ -74,12 +74,12 @@ const faqs : Array<Faq> =  [
     <div class="questions w-full lg:w-1/2 mx-auto">
         <div class="accordion">
             {faqs.map((faq, index) => {
-                return <div class="accordion-item">
+                return <div class="accordion-item" data-aos=`${index % 2 ? "fade-right" : "fade-left"}`>
                     <p class="accordion-link text-white text-lg font-normal leading-10 tracking-wide" data-target=`accordion-${index}`>
                         {faq.question}
                     </p>
                     <div class="answer" data-item=`accordion-${index}`>
-                        <p class="text-white text-md font-normal tracking-wide mt-8">{faq.answer}</p>
+                        <p class="text-white/60 text-md font-normal tracking-wide mt-4">{faq.answer}</p>
                     </div>
                     <hr class="border-white/50 my-4" />
                 </div>

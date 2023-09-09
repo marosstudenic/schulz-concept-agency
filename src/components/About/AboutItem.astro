@@ -10,7 +10,7 @@ const {title, description, side} = Astro.props;
 const sideClass = side === 'left' ? 'text-left' : 'text-right';
 ---
 
-<div class=`w-full ${sideClass}`>
+<div class=`w-full ${sideClass}` data-aos=`fade-${side}`>
     <p>
                 <span class="text-[#0732fe]  font-semibold uppercase tracking-wide">
                     {title}<br/></span>
