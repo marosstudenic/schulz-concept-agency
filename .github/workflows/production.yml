@@ -1,0 +1,42 @@
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+name: 🚀 [PRODUCTION] Deploy to FTP server
+jobs:
+  web-deploy:
+    name: 🚀 Run on ubuntu machine
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 🔨 Install packages & build
+        run: |
+          npm install
+          npm run build
+
+      - name: 📂 Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{secrets.FTP_SERVER}}
+          username: ${{secrets.FTP_USER}}
+          password: ${{secrets.FTP_PASSWORD}}
+          local-dir: ./dist/
+          server-dir: ${{secrets.FTP_SERVER}}/
+          port: 21
+          protocol: ftp
+          timeout: 100000
