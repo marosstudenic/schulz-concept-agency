@@ -12,7 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Schulz Concept Agency - Vyriešime za vás web, design a firemnú identitu">
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image" href="/assets/logos/logo-blue.png" />
+		<link rel="icon" type="image/svg" href="/assets/logos/logo-small-1.svg" id="link-icon"/>
 		<!--<meta name="generator" content={Astro.generator} />-->
 
 		<title>{title}</title>
@@ -46,3 +46,14 @@ const { title } = Astro.props;
 	}
 
 </style>
+
+
+<script>
+	let favIconIndex = 0;
+	const favIcons = ['/assets/logos/logo-small-1.svg', '/assets/logos/logo-small-2.svg', "/assets/logos/logo-small-3.svg"];
+	setInterval(()=> {
+		document.getElementById('link-icon').setAttribute('href', favIcons[favIconIndex]);
+		favIconIndex++;
+		if (favIconIndex >= favIcons.length) favIconIndex = 0;
+	}, 500);
+</script>
