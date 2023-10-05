@@ -1,35 +1,57 @@
-<nav>
+---
+interface Props {
+    mode: string;
+}
+
+const { mode } = Astro.props;
+
+
+const BLACK = 'black'
+const WHITE = 'white'
+
+
+const bgClass = mode === BLACK ? "bg-[#000]" : 'bg-[#fff]';
+const fontColorClass = mode === BLACK ? "text-white" : "text-black";
+const logoIcon = mode === BLACK ? "/assets/logos/small-logo.svg" : "/assets/logos/small-logo-black.svg";
+
+const menu = [
+    {
+        title:  "služby",
+        href: "/#services"
+    },
+    {
+        title: "naše práce",
+        href: "/#portfolio"
+    },
+    {
+        title: "Naša cesta",
+        href:"/#about"
+    },
+    {
+        title: "Kontakt",
+        href: "/#contact"
+    }
+]
+---
+
+
+<nav class:list={bgClass}>
     <div
         class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-8 py-2 mx-auto px-4"
     >
-        <img src="assets/logos/small-logo.svg" alt="logo schulz concept"/>
+        <a href="/">
+            <img src={logoIcon} alt="logo schulz concept"/>
+        </a>
 
         <div class="flex-grow gap-10 justify-center hidden lg:flex">
-            <a
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#services"
-            >
-                služby
-            </a>
-            <a
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#portfolio"
-            >
-                naše práce
-            </a>
-            <a
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#about"
-            >
-                Naša cesta
-            </a>
-            <!--<p-->
-            <!--    class="flex-grow-0 flex-shrink-0 text-xl text-center capitalize text-white"-->
-            <!--&gt;-->
-            <!--    SCHARFYN-->
-            <!--</p>-->
-            <a
-                class="flex-grow-0 flex-shrink-0 text-xl text-center uppercase text-white" href="/#contact"
-            >
-                Kontakt
-            </a>
+            {menu.map((item) => (
+                    <a
+                            class=`flex-grow-0 flex-shrink-0 text-xl text-center uppercase ${fontColorClass}` href={item.href}
+                    >
+                        {item.title}
+                    </a>
+            ))}
+
         </div>
 
         <div class="hamburger lg:hidden z-50" id="nav-button">
@@ -48,7 +70,7 @@
 
         <div class="hidden lg:block">
             <p
-                class="text-xl text-center uppercase text-white"
+                class=`text-xl text-center uppercase ${fontColorClass}`
             >
                 Napíš&nbsp;nám
             </p>
