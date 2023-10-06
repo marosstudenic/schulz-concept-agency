@@ -35,18 +35,18 @@ const menu = [
 ---
 
 
-<nav class:list={bgClass}>
+<nav class:list={bgClass} id="navbar">
     <div
-        class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-8 py-2 mx-auto px-4"
+        class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-4 py-2 mx-auto px-4"
     >
         <a href="/">
-            <img src={logoIcon} alt="logo schulz concept"/>
+            <img src={logoIcon} alt="logo schulz concept" class="h-6 object-contain"/>
         </a>
 
         <div class="flex-grow gap-10 justify-center hidden lg:flex">
             {menu.map((item) => (
                     <a
-                            class=`flex-grow-0 flex-shrink-0 text-xl text-center uppercase ${fontColorClass}` href={item.href}
+                            class=`flex-grow-0 flex-shrink-0 text-md text-center uppercase ${fontColorClass}` href={item.href}
                     >
                         {item.title}
                     </a>
@@ -55,7 +55,7 @@ const menu = [
         </div>
 
         <div class="hamburger lg:hidden z-50" id="nav-button">
-            <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="80" id="ham-icon">
+            <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="40" id="ham-icon">
                 <path
                         class="line top"
                         d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />
@@ -96,6 +96,17 @@ const menu = [
 </div>
 
 <style>
+
+    #navbar.sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        /* Additional styles e.g., adding a light background color so the blur is more noticeable */
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
     .ham {
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
@@ -173,5 +184,17 @@ const menu = [
     document.getElementsByClassName('mobile-menu-content')[0].addEventListener('click', function() {
         toggleMenu();
     })
+
+    window.addEventListener("scroll", function() {
+        let navbar = document.getElementById("navbar");
+        let sticky = navbar.offsetTop;
+
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    });
+
 
 </script>
