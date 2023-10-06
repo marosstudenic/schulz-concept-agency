@@ -67,4 +67,29 @@
     }, 1000)
 
 
+    window.addEventListener("scroll", function() {
+        let scaleImage = document.getElementById("hero-img");
+        let basePosition = scaleImage.offsetTop;
+        console.log(window.scrollY);
+        let scrollPosition = window.scrollY;
+        console.log(scrollPosition, "scroll position" );
+        console.log(basePosition, "base position")
+        let scaleValue = 1 + scrollPosition / 1000;
+
+        // Get current transform value
+        let currentTransform = window.getComputedStyle(scaleImage).transform;
+
+        // Construct a new transform value, preserving existing transforms
+        let newTransform = `scale(${scaleValue})`;
+
+        if (currentTransform && currentTransform !== 'none') {
+            newTransform = "translate(-50%, -50%) " + newTransform;
+        }
+
+        // Apply the new transform value
+        scaleImage.style.transform = newTransform;
+    });
+
+
+
 </script>
