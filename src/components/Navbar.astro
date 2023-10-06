@@ -21,7 +21,7 @@ const menu = [
     },
     {
         title: "naše práce",
-        href: "/#portfolio"
+        href: "/nase-prace"
     },
     {
         title: "Naša cesta",
@@ -29,7 +29,7 @@ const menu = [
     },
     {
         title: "Kontakt",
-        href: "/#contact"
+        href: "/contact"
     }
 ]
 ---
@@ -55,7 +55,7 @@ const menu = [
         </div>
 
         <div class="hamburger lg:hidden z-50" id="nav-button">
-            <svg class="ham ham3" viewBox="0 0 100 100" width="80" id="ham-icon">
+            <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="80" id="ham-icon">
                 <path
                         class="line top"
                         d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />
@@ -84,11 +84,9 @@ const menu = [
 
 <div class="mobile-menu-content fixed top-0 left-0 w-[100vw] h-[100vh] bg-dark-600 z-20 flex flex-col justify-center position-relative translate-x-full transition overflow-x-hidden">
     <ul class="w-full mx-auto text-white text-4xl px-4">
-        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Služby" href="/#services">Služby</a></li>
-        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Naše práce" href="/#portfolio">Naše práce</a></li>
-        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Naša cesta" href="/#about">Naša cesta</a></li>
-        <!--<li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Schafryn">Schafryn</a></li>-->
-        <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text="Kontakt" href="/#kontakt">Kontakt</a></li>
+        {menu.map((item) => (
+            <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text={item.title} href={item.href}>{item.title}</a></li>
+        ))}
     </ul>
 
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 text-white text-[100px] opacity-5 text-center font-bold">
@@ -116,7 +114,6 @@ const menu = [
     .line {
         fill:none;
         transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke:#fff;
         stroke-width:5.5;
         stroke-linecap:round;
     }
