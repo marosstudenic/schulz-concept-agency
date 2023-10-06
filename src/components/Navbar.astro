@@ -35,7 +35,7 @@ const menu = [
 ---
 
 
-<nav class:list={bgClass} id="navbar">
+<nav class:list={[bgClass, "bg-opacity-50"]} id="navbar">
     <div
         class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-4 py-2 mx-auto px-4"
     >
@@ -97,14 +97,14 @@ const menu = [
 
 <style>
 
-    #navbar.sticky {
+    #navbar {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
         backdrop-filter: blur(10px);
         /* Additional styles e.g., adding a light background color so the blur is more noticeable */
-        background-color: rgba(0, 0, 0, 0.6);
+        //background-color: rgba(0, 0, 0, 0.6);
     }
 
     .ham {
