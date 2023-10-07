@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Checkbox from "./Checkbox";
 import {Button} from "@material-tailwind/react";
+import emailjs from 'emailjs-com';
+
 
 
 type ProductOptions = {
@@ -36,9 +38,12 @@ const BUDGET_OPTIONS = [
 
 
 
+emailjs.init('vrpHqsq7jPzJ13OtB');
+
 const Formular = () => {
 
     const [currentStep, setCurrentStep] = useState(1);
+    const [sending, setSending] = useState(false);
     const [formData, setFormData] = useState<FormData>({
         products: OPTIONS.reduce((acc, option) => ({ ...acc, [option.name]: false }), {}),
         budget: '',
@@ -59,7 +64,7 @@ const Formular = () => {
                 ...prevState.products,
                 [e.target.name]: !prevState.products[e.target.name]
             }
-        }));        console.log(formData, "formdata")
+        }));
     }
 
     const handleTextChange = (e: any) => {
@@ -75,17 +80,23 @@ const Formular = () => {
     };
 
     const handleSubmit = (e:any) => {
-        nextStep();
         e.preventDefault();
-        console.log(e, "submit")
-        console.log(formData, "formdata")
-        // Send email using EmailJS
-        // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-        //     .then((result:any) => {
-        //         console.log(result.text);
-        //     }, (error:any) => {
-        //         console.log(error.text);
-        //     });
+        setSending(true);
+
+        emailjs.send("webglobe","template_p6y1336",{
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            products: OPTIONS.filter((item) => formData.products[item.name] ).map((item) => item.label).join(','),
+            budget: BUDGET_OPTIONS.find((item) => item.name === formData.budget)?.label || "chyba",
+            reply_to: formData.email,
+            vision: formData.vision,
+        }).then((result:any) => {
+            setSending(false);
+            nextStep();
+                }, (error:any) => {
+                    console.log(error.text);
+                });
     };
 
 
@@ -149,7 +160,7 @@ const Formular = () => {
 
         <div className="flex justify-center pt-10">
             <Button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</Button>
-            <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={(e)=>handleSubmit(e)}>Odoslať</Button>
+            <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={(e)=>handleSubmit(e)}>{sending ? "Odosielam ..." : "Odoslať"}</Button>
         </div>
 
         </>

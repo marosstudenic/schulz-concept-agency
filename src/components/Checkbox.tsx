@@ -12,7 +12,6 @@ export interface HeartCheckboxProps {
 }
 
 const HeartCheckbox = (props: HeartCheckboxProps) => {
-    console.log(props, "props")
     return (
         <div className="w-full flex gap-2 text-lg">
             <input
