@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Checkbox from "./Checkbox";
-import {Button} from "@material-tailwind/react";
 import emailjs from 'emailjs-com';
+import pkg from '@material-tailwind/react';
+const { Button } = pkg;
 
 
 
