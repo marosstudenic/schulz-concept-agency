@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Checkbox from "./Checkbox";
 import emailjs from 'emailjs-com';
-import { Button } from "@material-tailwind/react";
-
+import pkg from '@material-tailwind/react';
+const { Button } = pkg;
 import styles from '../css/Formular.module.css';
 
 
