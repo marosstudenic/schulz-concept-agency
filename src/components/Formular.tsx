@@ -33,8 +33,8 @@ function slugify(str: string) {
     return str.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
 }
 const OPTIONS = [
-    "Branding", "Aplikácia", "Merch", "Marketing", "UI / UX", "SCHAFRYN", "Web development",
-    "Grafický dizajn", "Naše know-how"
+    "Branding", "Aplikácia", "Merch", "Marketing", "UI / UX", "Web development",
+    "Grafický dizajn", "Naše know-how", "Iné"
 ].map(option => ({ name: slugify(option), label: option }));
 
 const BUDGET_OPTIONS = [
