@@ -93,10 +93,7 @@ const faqs : Array<Faq> =  [
     Array.from(document.getElementsByClassName('accordion-link')).forEach((item) => {
         item.addEventListener('click', (e) => {
             const target = e.target.getAttribute('data-target');
-            console.log(e.target.getAttribute('data-target'))
-            console.log(target)
             const answer = document.querySelector(`[data-item=${target}]`);
-            console.log(answer)
             answer.classList.toggle('active');
         })
     })
