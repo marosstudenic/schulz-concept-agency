@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-15UltTh.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-16UltThIt.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-25Th.ttf') format('truetype');
+    font-weight: 200 ;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-25Th.ttf') format('truetype');
+    font-weight: 200 ;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-35XLt.ttf') format('truetype');
+    font-weight: 300; /* Assuming "XLt" implies Extra Light weight */
+    font-style: normal; /* No indication of italic or oblique style in the name */
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-36XLtIt.ttf') format('truetype');
+    font-weight: 300; /* Assuming "XLt" implies Extra Light weight */
+    font-style: italic; /* "It" implies Italic style */
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-45Lt.ttf') format('truetype');
+    font-weight: 400; /* "Lt" might imply Light weight, but usually, this would be coded as 300.
+                        Here, it is being assumed as Regular due to a lack of context */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-46LtIt.ttf') format('truetype');
+    font-weight: 400; /* Similar assumption as above for "Lt" */
+    font-style: italic; /* "It" implies Italic style */
+}
+
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-55Rg.ttf') format('truetype');
+    font-weight: 500; /* "Rg" might imply Regular, but numerically it’s often 400. Here, using 500 to differentiate it */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-56It.ttf') format('truetype');
+    font-weight: 500; /* Assuming same weight as above, though it could be different */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-65Md.ttf') format('truetype');
+    font-weight: 600; /* "Md" might suggest Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-66MdIt.ttf') format('truetype');
+    font-weight: 600; /* Same weight as non-italic variant, usually */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-75Bd.ttf') format('truetype');
+    font-weight: 700; /* "Bd" usually suggests Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-76BdIt.ttf') format('truetype');
+    font-weight: 700; /* Keeping consistent with non-italic variant */
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-95Blk.ttf') format('truetype');
+    font-weight: 900; /* "Blk" implies Black, usually the heaviest */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskDSPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskDSPro-96BlkIt.ttf') format('truetype');
+    font-weight: 900; /* Same weight, with italic style */
+    font-style: italic;
+}
+
+/* NHaasGroteskTXPro font-face definitions */
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-55Rg.ttf') format('truetype');
+    font-weight: 500; /* "Rg" might imply Regular, interpreted as 500 for differentiation */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-56It.ttf') format('truetype');
+    font-weight: 500; /* Presumed to be the same weight, but italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-65Md.ttf') format('truetype');
+    font-weight: 600; /* "Md" suggests Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-66MdIt.ttf') format('truetype');
+    font-weight: 600; /* Presumed to be the same weight, but italic */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-75Bd.ttf') format('truetype');
+    font-weight: 700; /* "Bd" suggests Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NHaasGroteskTXPro';
+    src: url('/assets/fonts/OpenType TTF Pro/NHaasGroteskTXPro-76BdIt.ttf') format('truetype');
+    font-weight: 700; /* Presumed to be the same weight, but italic */
+    font-style: italic;
+}
+
+

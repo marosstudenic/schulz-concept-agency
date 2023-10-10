@@ -8,7 +8,12 @@ module.exports = withMT({
 		"node_modules/@material-tailwind/html/theme/components/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				'nhaas-dspro': ['NHaasGroteskDSPro', 'sans-serif'],
+				'nhaas-txpro': ['NHaasGroteskTXPro', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
 });
