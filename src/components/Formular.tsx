@@ -192,7 +192,9 @@ const Formular = () => {
     return (
         <section className="bg-white px-4">
             <div className="container mx-auto bg-gray-300 rounded-3xl py-8 px-4">
-                <p className="text-black/50 mb-10 uppercase">Formulár&nbsp;&nbsp;<b>{currentStep} / 4</b></p>
+                {currentStep < 4 &&
+                <p className="text-black/50 mb-10 uppercase">Formulár&nbsp;&nbsp;<b>{currentStep} / 3</b></p>
+                }
                 <form id="contactForm">
                     {currentSection}
                 </form>
