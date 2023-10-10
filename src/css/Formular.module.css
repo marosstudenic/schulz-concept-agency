@@ -1,0 +1,17 @@
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper label {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label {
+    transform: translateY(-24px);
+    opacity: 0.8;
+}

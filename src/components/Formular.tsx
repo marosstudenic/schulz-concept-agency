@@ -3,6 +3,9 @@ import Checkbox from "./Checkbox";
 import emailjs from 'emailjs-com';
 import { Button } from "@material-tailwind/react";
 
+import styles from '../css/Formular.module.css';
+
+
 
 
 
@@ -30,12 +33,12 @@ function slugify(str: string) {
     return str.toLowerCase().replace(/ /g,'-').replace(/[^\w-]+/g,'');
 }
 const OPTIONS = [
-    "Branding", "Marketing", "Web", "E-commerce", "SEO", "PPC", "Social media",
-    "Copywriting", "Video", "Fotografia", "Grafický dizajn", "Aplikáciu", "Iné"
+    "Branding", "Aplikácia", "Merch", "Marketing", "UI / UX", "SCHAFRYN", "Web development",
+    "Grafický dizajn", "Naše know-how"
 ].map(option => ({ name: slugify(option), label: option }));
 
 const BUDGET_OPTIONS = [
-    "menej ako 500 €", "500 - 1000 €", "1000 - 2000 €", "2000 - 5000 €", "5000 - 10000 €", "viac ako 10000 €"].map(option => ({ name: slugify(option), label: option }));
+    "menej ako 500 €", "500 – 1000 €", "1000 – 2500 €", "2500 – 5000 €", "5 000 – 10 000 €","10 000 – 25 000 €", "25 000 – 50 000 €", "50 000 – 100 000 €", "viac ako 100 000 €"].map(option => ({ name: slugify(option), label: option }));
 
 
 
@@ -103,7 +106,7 @@ const Formular = () => {
 
     const Section1 =  <>
         <p className="text-3xl">Mám záujem o</p>
-    <div className="grid grid-cols-2 gap-2 my-4 px-2">
+    <div className="grid grid-cols-3 gap-8 my-8 px-2">
         {OPTIONS.map(({ name, label }) => (
             <Checkbox  name={name} label={label} id={name} key={name} checked={formData.products[name]}
                        type="checkbox"                onChange={handleCheckboxChange}
@@ -121,7 +124,7 @@ const Formular = () => {
 
     const section2 = <>
         <p className="text-3xl">Váš rozpočet</p>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 my-4 px-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 my-8 px-2">
                 {BUDGET_OPTIONS.map(({name, label}) =>
                     <Checkbox name={name} label={label} id={name} key={name} type="radio" checked={formData.budget === name} onChange={(e)=> handleChange(e)}/>
                 )}
@@ -136,28 +139,37 @@ const Formular = () => {
         <p className="text-3xl">O vás</p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 my-4">
             <div>
-                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-4 px-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
+                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-2 px-0 my-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
                        type="text" placeholder="Meno" aria-label="Full name" name="name"
                        onChange={(e)=> handleTextChange(e)}
                         value={formData.name}
                 />
-                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-4 px-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
+                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-2 px-0 my-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
                        type="email" placeholder="Email" aria-label="Full name" name="email"
                        onChange={(e)=> handleTextChange(e)}
                         value={formData.email}
                 />
-                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-4 px-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
+                <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-2 px-0 my-2  leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
                        type="text" placeholder="Telefon" aria-label="Full name" name="phone"
                        onChange={(e)=> handleTextChange(e)}
                         value={formData.phone}
                 />
              </div>
 
-            <input className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-4 px-2 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
-                   type="text" placeholder="Vaša vízia" aria-label="Full name" name="vision"
-                   onChange={(e)=> handleTextChange(e)}
-                   value={formData.vision}
-            />        </div>
+            <div className={`input-wrapper ${styles['input-wrapper']}`}>
+                <input
+                  id="vision"
+                  className="appearance-none bg-transparent border-black w-full text-black/80 mr-3 py-2 px-0 leading-tight focus:outline-none border-b-2 border-b-gray-400 placeholder:text-black/60"
+                  type="text"
+                  placeholder=" "
+                  aria-label="Full name"
+                  name="vision"
+                  onChange={(e)=> handleTextChange(e)}
+                  value={formData.vision}
+                />
+                <label htmlFor="vision">Vaša vízia</label>
+            </div>
+        </div>
 
         <div className="flex justify-center pt-10">
             <Button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</Button>
