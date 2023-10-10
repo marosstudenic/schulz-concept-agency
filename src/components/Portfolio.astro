@@ -6,6 +6,7 @@ interface Props {
     extended: boolean,
     nextSectionTitle: string,
     nextSectionLink: string,
+    count: number
 }
 
 
@@ -69,7 +70,7 @@ const items : Array<PortfolioItemType> = [
 ]
 
 
-const { hasTopRadius, extended, nextSectionLink, nextSectionTitle } = Astro.props;
+const { hasTopRadius, extended, nextSectionLink, nextSectionTitle, count } = Astro.props;
 
 const roundedClass = hasTopRadius ? "rounded-b-[4em]" : "rounded-[4em]";
 
@@ -85,7 +86,7 @@ const roundedClass = hasTopRadius ? "rounded-b-[4em]" : "rounded-[4em]";
         }
 
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-between gap-10">
-            {items.map((item, index) => (
+            {items.slice(0,count).map((item, index) => (
                     <PortfolioItem title={item.title} description={item.description} img={item.img} index={index}/>
             ))}
 

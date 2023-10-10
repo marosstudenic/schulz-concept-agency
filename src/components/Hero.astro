@@ -71,11 +71,7 @@
 
     window.addEventListener("scroll", function () {
         let scaleImage = document.getElementById("hero-img");
-        let basePosition = scaleImage.offsetTop;
-        console.log(window.scrollY);
         let scrollPosition = window.scrollY;
-        console.log(scrollPosition, "scroll position");
-        console.log(basePosition, "base position")
         let scaleValue = 1 + scrollPosition / 1000;
 
         // Get current transform value
