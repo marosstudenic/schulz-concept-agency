@@ -102,7 +102,7 @@ const Formular = () => {
 
 
     const Section1 =  <>
-        <p className="text-3xl">Mam záujem o</p>
+        <p className="text-3xl">Mám záujem o</p>
     <div className="grid grid-cols-2 gap-2 my-4 px-2">
         {OPTIONS.map(({ name, label }) => (
             <Checkbox  name={name} label={label} id={name} key={name} checked={formData.products[name]}
@@ -180,7 +180,7 @@ const Formular = () => {
     return (
         <section className="bg-white px-4">
             <div className="container mx-auto bg-gray-300 rounded-3xl py-8 px-4">
-                <p className="text-black/50 mb-10">Formular <b>{currentStep} / 4</b></p>
+                <p className="text-black/50 mb-10 uppercase">Formulár&nbsp;&nbsp;<b>{currentStep} / 4</b></p>
                 <form id="contactForm">
                     {currentSection}
                 </form>
