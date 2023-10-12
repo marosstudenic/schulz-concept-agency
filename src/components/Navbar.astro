@@ -40,7 +40,7 @@ const menu = [
         class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-4 py-2 mx-auto px-4"
     >
         <a href="/">
-            <img src={logoIcon} alt="logo schulz concept" class="h-6 object-contain"/>
+            <img src={logoIcon} alt="logo schulz concept" class="h-6 object-contain pr-2"/>
         </a>
 
         <div class="flex-grow gap-10 justify-center hidden lg:flex">
@@ -53,6 +53,8 @@ const menu = [
             ))}
 
         </div>
+
+        <p class="uppercase text-white lg:hidden">schulz concept</p>
 
         <div class="hamburger lg:hidden z-50" id="nav-button">
             <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="40" id="ham-icon">
