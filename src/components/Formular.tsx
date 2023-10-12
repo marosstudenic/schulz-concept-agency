@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Checkbox from "./Checkbox";
 import emailjs from 'emailjs-com';
-import pkg from '@material-tailwind/react';
-const { Button } = pkg;
+import { Button } from '@material-tailwind/react';
 import styles from '../css/Formular.module.css';
 
 
@@ -106,7 +105,7 @@ const Formular = () => {
 
     const Section1 =  <>
         <p className="text-3xl">Mám záujem o</p>
-    <div className="grid grid-cols-3 gap-8 my-8 px-2">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 px-2">
         {OPTIONS.map(({ name, label }) => (
             <Checkbox  name={name} label={label} id={name} key={name} checked={formData.products[name]}
                        type="checkbox"                onChange={handleCheckboxChange}
@@ -117,7 +116,6 @@ const Formular = () => {
 
     </div>
         <div className="flex justify-center pt-10">
-            <Button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</Button>
             <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={()=>nextStep()}>ďalej</Button>
         </div>
     </>;
