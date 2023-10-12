@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Checkbox from "./Checkbox";
 import emailjs from 'emailjs-com';
-import { Button } from '@material-tailwind/react';
+
 import styles from '../css/Formular.module.css';
 
 
@@ -116,7 +116,7 @@ const Formular = () => {
 
     </div>
         <div className="flex justify-center pt-10">
-            <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={()=>nextStep()}>ďalej</Button>
+            <button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={()=>nextStep()}>ďalej</button>
         </div>
     </>;
 
@@ -128,8 +128,8 @@ const Formular = () => {
                 )}
             </div>
         <div className="flex justify-center pt-10">
-            <Button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</Button>
-            <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={()=>nextStep()}>ďalej</Button>
+            <button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</button>
+            <button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={()=>nextStep()}>ďalej</button>
         </div>
     </>;
 
@@ -170,8 +170,8 @@ const Formular = () => {
         </div>
 
         <div className="flex justify-center pt-10">
-            <Button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</Button>
-            <Button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={(e)=>handleSubmit(e)}>{sending ? "Odosielam ..." : "Odoslať"}</Button>
+            <button className="text-black/40 px-8 py-2 rounded-3xl" type="button" onClick={()=>prevStep()}>spať</button>
+            <button className="bg-black text-white px-8 py-2 rounded-3xl" type="button" onClick={(e)=>handleSubmit(e)}>{sending ? "Odosielam ..." : "Odoslať"}</button>
         </div>
 
         </>
