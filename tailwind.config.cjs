@@ -12,6 +12,7 @@ module.exports = withMT({
 			fontFamily: {
 				'nhaas-dspro': ['NHaasGroteskDSPro', 'sans-serif'],
 				'nhaas-txpro': ['NHaasGroteskTXPro', 'sans-serif'],
+				'caveat': ['Caveat', 'cursive'],
 			},
 		},
 	},
