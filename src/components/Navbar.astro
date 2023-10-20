@@ -12,6 +12,7 @@ const WHITE = 'white'
 
 const bgClass = mode === BLACK ? "bg-[#000]" : 'bg-[#fff]';
 const fontColorClass = mode === BLACK ? "text-white" : "text-black";
+const menuIconClass = !(mode === BLACK) ? "bg-[#000]" : 'bg-[#fff]';
 const logoIcon = mode === BLACK ? "/assets/logos/small-logo.svg" : "/assets/logos/small-logo-black.svg";
 
 const menu = [
@@ -35,7 +36,7 @@ const menu = [
 ---
 
 
-<nav class:list={[bgClass, "bg-opacity-50"]} id="navbar">
+<nav class:list={[bgClass, "bg-opacity-50", "py-4"]} id="navbar">
     <div
         class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-4 py-2 mx-auto px-4"
     >
@@ -46,7 +47,7 @@ const menu = [
         <div class="flex-grow gap-10 justify-center hidden lg:flex">
             {menu.map((item) => (
                     <a
-                            class=`flex-grow-0 flex-shrink-0 text-md text-center uppercase ${fontColorClass}` href={item.href}
+                            class=`flex-grow-0 flex-shrink-0 text-md text-center uppercase ${fontColorClass} tracking-wide` href={item.href}
                     >
                         {item.title}
                     </a>
@@ -56,24 +57,31 @@ const menu = [
 
         <p class=`uppercase lg:hidden ${fontColorClass}`>schulz concept</p>
 
-        <div class="hamburger lg:hidden z-50" id="nav-button">
-            <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="40" id="ham-icon">
-                <path
-                        class="line top"
-                        d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />
-                <path
-                        class="line middle"
-                        d="m 70,50 h -40 c -5.6862,0 -8.534259,5.373483 -8.534259,11.551069 0,7.187738 3.499166,10.922274 13.131984,10.922274 11.021777,0 7.022787,-15.773343 15.531095,-15.773343 3.268142,0 5.177031,-2.159429 5.177031,-6.7 0,-4.540571 -1.766442,-7.33533 -5.087851,-7.326157 -3.321409,0.0092 -5.771288,2.789632 -5.771288,7.326157 0,4.536525 2.478983,6.805271 5.771288,6.7" />
-                <path
-                        class="line bottom"
-                        d="m 70,67 h -40 c 0,0 -3.680675,0.737051 -3.660714,-3.517857 0.02541,-5.415597 3.391687,-10.357143 10.982142,-10.357143 4.048418,0 17.88928,0.178572 23.482143,0.178572 0,2.563604 2.451177,3.403635 4.642857,3.392857 2.19168,-0.01078 4.373905,-1.369814 4.375,-3.392857 0.0011,-2.023043 -1.924401,-2.589191 -4.553571,-4.107143 -2.62917,-1.517952 -4.196429,-1.799562 -4.196429,-3.660714 0,-1.861153 2.442181,-3.118811 4.196429,-3.035715 1.754248,0.0831 4.375,0.890841 4.375,3.125 2.628634,0 6.160714,0.267857 6.160714,0.267857 l -0.178571,-2.946428 10.178571,0 -10.178571,0 v 6.696428 l 8.928571,0 -8.928571,0 v 7.142858 l 10.178571,0 -10.178571,0" />
-            </svg>
-        </div>
+        <!--<div class="hamburger lg:hidden z-50" id="nav-button">-->
+        <!--    <svg class=`ham ham3 ${mode===BLACK ? "stroke-[#fff]" : "stroke-[#000]" }` viewBox="0 0 100 100" width="40" id="ham-icon">-->
+        <!--        <path-->
+        <!--                class="line top"-->
+        <!--                d="m 70,33 h -40 c -11.092231,0 11.883874,13.496726 -3.420361,12.956839 -0.962502,-2.089471 -2.222071,-3.282996 -4.545687,-3.282996 -2.323616,0 -5.113897,2.622752 -5.113897,7.071068 0,4.448316 2.080609,7.007933 5.555839,7.007933 2.401943,0 2.96769,-1.283974 4.166879,-3.282995 2.209342,0.273823 4.031294,1.642466 5.857227,-0.252538 v -13.005715 16.288404 h 7.653568" />-->
+        <!--        <path-->
+        <!--                class="line middle"-->
+        <!--                d="m 70,50 h -40 c -5.6862,0 -8.534259,5.373483 -8.534259,11.551069 0,7.187738 3.499166,10.922274 13.131984,10.922274 11.021777,0 7.022787,-15.773343 15.531095,-15.773343 3.268142,0 5.177031,-2.159429 5.177031,-6.7 0,-4.540571 -1.766442,-7.33533 -5.087851,-7.326157 -3.321409,0.0092 -5.771288,2.789632 -5.771288,7.326157 0,4.536525 2.478983,6.805271 5.771288,6.7" />-->
+        <!--        <path-->
+        <!--                class="line bottom"-->
+        <!--                d="m 70,67 h -40 c 0,0 -3.680675,0.737051 -3.660714,-3.517857 0.02541,-5.415597 3.391687,-10.357143 10.982142,-10.357143 4.048418,0 17.88928,0.178572 23.482143,0.178572 0,2.563604 2.451177,3.403635 4.642857,3.392857 2.19168,-0.01078 4.373905,-1.369814 4.375,-3.392857 0.0011,-2.023043 -1.924401,-2.589191 -4.553571,-4.107143 -2.62917,-1.517952 -4.196429,-1.799562 -4.196429,-3.660714 0,-1.861153 2.442181,-3.118811 4.196429,-3.035715 1.754248,0.0831 4.375,0.890841 4.375,3.125 2.628634,0 6.160714,0.267857 6.160714,0.267857 l -0.178571,-2.946428 10.178571,0 -10.178571,0 v 6.696428 l 8.928571,0 -8.928571,0 v 7.142858 l 10.178571,0 -10.178571,0" />-->
+        <!--    </svg>-->
+        <!--</div>-->
+
+        <label for="check" id="nav-button" class="flex lg:hidden">
+            <input type="checkbox" id="check"/>
+            <span class=`${menuIconClass}`></span>
+            <span class=`${menuIconClass}`></span>
+            <span class=`${menuIconClass}`></span>
+        </label>
 
         <div class="hidden lg:block">
             <a href="/contact">
                 <p
-                        class=`text-xl text-center uppercase ${fontColorClass}`
+                        class=`text-md text-center uppercase ${fontColorClass} tracking-wide pt-2`
                 >
                     Napíš&nbsp;nám
                 </p>
@@ -101,6 +109,67 @@ const menu = [
 
 <style>
 
+    label{
+        display:flex;
+        flex-direction:column;
+        width:40px;
+        cursor:pointer;
+    }
+
+    label span{
+        border-radius:10px;
+        height:3px;
+        margin: 3px 0;
+        transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    }
+
+
+    span:nth-of-type(1){
+        width:50%;
+
+    }
+
+    span:nth-of-type(2){
+        width:100%;
+    }
+
+
+    span:nth-of-type(3){
+        width:75%;
+
+    }
+
+
+    input[type="checkbox"]{
+        display:none;
+    }
+
+
+    input[type="checkbox"]:checked ~ span:nth-of-type(1){
+        transform-origin:bottom;
+        transform:rotatez(45deg) translate(3px,0px);
+        width:40%;
+    }
+
+
+    input[type="checkbox"]:checked ~ span:nth-of-type(2){
+
+        transform-origin:top;
+        transform:rotatez(-45deg);
+        width:80%;
+    }
+
+
+    input[type="checkbox"]:checked ~ span:nth-of-type(3){
+
+        transform-origin:bottom;
+        width:40%;
+        transform: translate(14px,-4px) rotatez(45deg);
+
+
+    }
+
     #navbar {
         position: fixed;
         top: 0;
@@ -111,78 +180,21 @@ const menu = [
         //background-color: rgba(0, 0, 0, 0.6);
     }
 
-    .ham {
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-        transition: transform 400ms;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .hamRotate.active {
-        transform: rotate(45deg);
-    }
-    .hamRotate180.active {
-        transform: rotate(180deg);
-    }
-    .line {
-        fill:none;
-        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-        stroke-width:5.5;
-        stroke-linecap:round;
-    }
-    .ham3 .top {
-        stroke-dasharray: 40 130;
-    }
-    .ham3 .middle {
-        stroke-dasharray: 40 140;
-    }
-    .ham3 .bottom {
-        stroke-dasharray: 40 205;
-    }
-    .ham3.active .top {
-        stroke-dasharray: 75 130;
-        stroke-dashoffset: -63px;
-    }
-    .ham3.active .middle {
-        stroke-dashoffset: -102px;
-    }
-    .ham3.active .bottom {
-        stroke-dasharray: 110 205;
-        stroke-dashoffset: -86px;
-    }
-
-    ul, li, a {
-        transition: ease 0.5s;
-        letter-spacing: 6px;
-    }
-    ul:has(li:hover) li a {
-        opacity: 0;
-    }
-
-    ul li a:hover {
-        opacity: 1 !important;
-    }
-
-
-
-    ul li:hover a::before {
-        opacity: 0.05;
-        letter-spacing: 0;
-    }
-
 </style>
 
 <script>
+    let i = 0;
     const toggleMenu = () => {
         document.querySelector('.mobile-menu-content').classList.toggle('translate-x-full');
-        document.querySelector('#ham-icon').classList.toggle('active');
         document.querySelector('body').classList.toggle("fixed");
     }
 
     document.getElementById('nav-button').addEventListener('click', function() {
-        toggleMenu();
+        i++;
+        if (i == 2){
+            i = 0;
+            toggleMenu();
+        }
     })
 
     document.getElementsByClassName('mobile-menu-content')[0].addEventListener('click', function() {
