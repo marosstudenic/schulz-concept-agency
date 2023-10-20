@@ -94,7 +94,7 @@ const menu = [
     
 </nav>
 
-<div class="mobile-menu-content fixed top-0 left-0 w-[100vw] h-[100vh] bg-dark-600 z-20 flex flex-col justify-center position-relative translate-x-full transition overflow-x-hidden">
+<div class="mobile-menu-content fixed top-0 left-0 w-[100vw] h-[100vh] bg-black z-20 flex flex-col justify-center position-relative translate-x-full transition overflow-x-hidden">
     <ul class="w-full mx-auto text-white text-4xl px-4">
         {menu.map((item) => (
             <li class="my-12 hover:scale-125 text-center"><a class="py-2 cursor-pointer uppercase inline" data-text={item.title} href={item.href}>{item.title}</a></li>
@@ -187,6 +187,7 @@ const menu = [
     const toggleMenu = () => {
         document.querySelector('.mobile-menu-content').classList.toggle('translate-x-full');
         document.querySelector('body').classList.toggle("fixed");
+        document.querySelector('nav').classList.toggle("bg-opacity-50");
     }
 
     document.getElementById('nav-button').addEventListener('click', function() {
