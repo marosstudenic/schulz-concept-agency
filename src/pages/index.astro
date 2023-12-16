@@ -11,28 +11,30 @@ import FAQ from "../components/FAQ.astro";
 import About from "../components/About.astro";
 import Footer from "../components/Footer.astro";
 
-import '../css/fonts.css';
+import "../css/fonts.css";
 ---
 
 <Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
 	<main class="overflow-hidden">
-		<Navbar mode="black"/>
-		<Hero/>
-		<Services/>
-		<Plan/>
-		<Portfolio nextSectionTitle="Zobraziť viac" nextSectionLink="/nase-prace" count="6"/>
-		<MovingTags/>
-		<Reviews/>
-		<FAQ/>
-		<About/>
-		<MovingTags/>
-		<Footer/>
+		<Navbar mode="black" />
+		<Hero />
+		<Services />
+		<Plan />
+		<Portfolio
+			nextSectionTitle="Zobraziť viac"
+			nextSectionLink="/nase-prace"
+			count={6}
+		/>
+		<MovingTags />
+		<Reviews />
+		<FAQ />
+		<About />
+		<MovingTags />
+		<Footer />
 	</main>
 </Layout>
 
-
 <style></style>
-
 
 <script>
 	// document.addEventListener("scroll", function() {
@@ -50,5 +52,4 @@ import '../css/fonts.css';
 	// 		}
 	// 	});
 	// });
-
 </script>

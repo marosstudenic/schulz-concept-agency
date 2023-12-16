@@ -6,12 +6,19 @@ import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import HeroHeading from "../components/HeroHeading.astro";
 ---
+
 <Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
     <main class="overflow-hidden">
-        <Navbar mode="white"/>
-        <HeroHeading/>
-        <Portfolio hasTopRadius="false" extended="true" nextSectionTitle="Kontakt" nextSectionLink="/contact" count="10"/>
-        <MovingTags/>
-        <Footer/>
+        <Navbar mode="white" />
+        <HeroHeading />
+        <Portfolio
+            extended="true"
+            hasTopRadius="false"
+            nextSectionTitle="Kontakt"
+            nextSectionLink="/contact"
+            count={10}
+        />
+        <MovingTags />
+        <Footer />
     </main>
 </Layout>

@@ -1,45 +1,44 @@
 ---
-
 type Faq = {
     question: string;
     answer: string;
-}
-const faqs : Array<Faq> =  [
+};
+const faqs: Array<Faq> = [
     {
         question: "Kedy môžete začať?",
-        answer: "Hneď ako sa dohodneme na podmienkach a navrhneme spoluprácu, s ktorou budete súhlasiť."
+        answer: "Hneď ako sa dohodneme na podmienkach a navrhneme spoluprácu, s ktorou budete súhlasiť.",
     },
     {
         question: "Ako dlho trvá celý proces?",
-        answer: "Záleží od rozsahu projektu, ale v priemere 2-3 týždne."
+        answer: "Záleží od rozsahu projektu, ale v priemere 2-3 týždne.",
     },
     {
         question: "Ako to bude prebiehať?",
-        answer: "Po dohode na podmienkach a zálohe začnem s prácou. Pravidelne Vás budem informovať o priebehu a v prípade potreby sa môžeme stretnúť."
+        answer: "Po dohode na podmienkach a zálohe začnem s prácou. Pravidelne Vás budem informovať o priebehu a v prípade potreby sa môžeme stretnúť.",
     },
     {
         question: "Do akej miery môžem vstupovať do procesu?",
-        answer: "Vždy môžete prísť s nápadmi a návrhmi, ktoré radi zohľadníme a zapracujeme."
+        answer: "Vždy môžete prísť s nápadmi a návrhmi, ktoré radi zohľadníme a zapracujeme.",
     },
     {
         question: "Kto bude vlastniť autorské práva?",
-        answer: "Zákon nám nedovoluje preniesť autorské práva, ale vy budete vlastniť výhradnú licenciu na používanie."
+        answer: "Zákon nám nedovoluje preniesť autorské práva, ale vy budete vlastniť výhradnú licenciu na používanie.",
     },
     {
         question: "Neviem, čo presne potrebujem. Dokážete mi poradiť?",
-        answer: "Samozrejme. Vždy sa môžeme stretnúť a spoločne si všetko prebrať."
+        answer: "Samozrejme. Vždy sa môžeme stretnúť a spoločne si všetko prebrať.",
     },
     {
         question: "Čo ak sa mi dizajn nebude páčiť?",
-        answer: "Vždy sa môžeme stretnúť a spoločne si všetko prebrať."
+        answer: "Vždy sa môžeme stretnúť a spoločne si všetko prebrať.",
     },
     {
         question: "Čo je to identita značky?",
-        answer: "Identita značky je súbor všetkých vizuálnych prvkov, ktoré tvoria značku. Patrí sem logo, farby, typografia, grafické prvky, fotografie, ... "
+        answer: "Identita značky je súbor všetkých vizuálnych prvkov, ktoré tvoria značku. Patrí sem logo, farby, typografia, grafické prvky, fotografie, ... ",
     },
     {
         question: "Naozaj potrebujem značku?",
-        answer: "Značka je vizuálna reprezentácia Vašej firmy. Pomáha Vám vytvoriť si dôveryhodnosť a zviditeľniť sa. Je to prvý krok k tomu, aby si Vás zákazníci zapamätali."
+        answer: "Značka je vizuálna reprezentácia Vašej firmy. Pomáha Vám vytvoriť si dôveryhodnosť a zviditeľniť sa. Je to prvý krok k tomu, aby si Vás zákazníci zapamätali.",
     },
     {
         question: "Prečo by som mal investovať do brandingu/re-brandingu?",
@@ -50,56 +49,78 @@ const faqs : Array<Faq> =  [
         answer: "Grafický dizajn je vizuálna reprezentácia Vašej firmy. Pomáha Vám vytvoriť si dôveryhodnosť a zviditeľniť sa. Je to prvý krok k tomu, aby si Vás zákazníci zapamätali.",
     },
     {
-        question: "Aký rozpočet budem potrebovať na vybudovanie značky alebo grafiky?",
+        question:
+            "Aký rozpočet budem potrebovať na vybudovanie značky alebo grafiky?",
         answer: "Každý projekt je iný a preto je ťažké povedať presnú sumu. Vždy sa môžeme stretnúť a spoločne si všetko prebrať.",
     },
     {
-        question: "Ako dlho bude trvať, kým sa dostanete na prvú stránku Google?",
+        question:
+            "Ako dlho bude trvať, kým sa dostanete na prvú stránku Google?",
         answer: "Na prvú stránku Google sa nedostanete cez noc. Je to dlhodobý proces, ktorý vyžaduje trpezlivosť a čas. Výsledky sa začnú prejavovať približne po 3 mesiacoch.",
     },
     {
-        question: "Môžem webovú stránku aktualizovať sám po jej dokončení alebo to budete robiť vy?",
-        answer: "Záleží od projektu a dohody. Ak budete chcieť editovať obsah stránky sami, vytvorím Vám stránku na redakčnom systéme WordPress, ktorý je jednoduchý na používanie. Ak budete chcieť, aby sme sa o stránku starali my, tak dokážeme zabezpečiť aj to."
+        question:
+            "Môžem webovú stránku aktualizovať sám po jej dokončení alebo to budete robiť vy?",
+        answer: "Záleží od projektu a dohody. Ak budete chcieť editovať obsah stránky sami, vytvorím Vám stránku na redakčnom systéme WordPress, ktorý je jednoduchý na používanie. Ak budete chcieť, aby sme sa o stránku starali my, tak dokážeme zabezpečiť aj to.",
     },
     {
-        question: "Ako je to s doménami? Kúpite pre mňa doménu? Čo ak už mám vlastnú?",
-        answer: "Doménu si môžete kúpiť sami alebo môžeme zabezpečiť jej kúpu my. Ak už máte vlastnú doménu, tak ju môžeme použiť."
-    }
+        question:
+            "Ako je to s doménami? Kúpite pre mňa doménu? Čo ak už mám vlastnú?",
+        answer: "Doménu si môžete kúpiť sami alebo môžeme zabezpečiť jej kúpu my. Ak už máte vlastnú doménu, tak ju môžeme použiť.",
+    },
 ];
-
 ---
 
 <section id="faq" class="container mx-auto py-16 px-4 lg:px-12">
     <p class="text-xl text-left uppercase text-white/50 mb-8">FAQ</p>
     <div class="questions w-full lg:w-1/2 mx-auto">
         <div class="accordion">
-            {faqs.map((faq, index) => {
-                return <div class="accordion-item" data-aos=`${index % 2 ? "fade-right" : "fade-left"}`>
-                    <p class="accordion-link text-white text-lg font-normal leading-10 tracking-wide" data-target=`accordion-${index}`>
-                        {faq.question}
-                    </p>
-                    <div class="answer active" data-item=`accordion-${index}`>
-                        <p class="text-white/60 text-md font-normal tracking-wide mt-4">{faq.answer}</p>
-                    </div>
-                    <hr class="border-white/50 my-4" />
-                </div>
-            })}
+            {
+                faqs.map((faq, index) => {
+                    return (
+                        <div
+                            class="accordion-item"
+                            data-aos={`${
+                                index % 2 ? "fade-right" : "fade-left"
+                            }`}
+                        >
+                            <p
+                                class="accordion-link text-white text-lg font-normal leading-10 tracking-wide"
+                                data-target={`accordion-${index}`}
+                            >
+                                {faq.question}
+                            </p>
+                            <div
+                                class="answer active"
+                                data-item={`accordion-${index}`}
+                            >
+                                <p class="text-white/60 text-md font-normal tracking-wide mt-4">
+                                    {faq.answer}
+                                </p>
+                            </div>
+                            <hr class="border-white/50 my-4" />
+                        </div>
+                    );
+                })
+            }
         </div>
     </div>
 </section>
 
-
 <script>
-    Array.from(document.getElementsByClassName('accordion-link')).forEach((item) => {
-        item.addEventListener('click', (e) => {
-            const target = e.target.getAttribute('data-target');
-            const answer = document.querySelector(`[data-item=${target}]`);
-            answer.classList.toggle('active');
-        })
-    })
+    Array.from(document.getElementsByClassName("accordion-link")).forEach(
+        (item) => {
+            item.addEventListener("click", (e) => {
+                if (e.target == null) return;
+                const target = e.target.getAttribute("data-target");
+                const answer = document.querySelector(`[data-item=${target}]`);
+                answer!.classList.toggle("active");
+            });
+        }
+    );
 </script>
 <style>
-.accordion-item {
+    .accordion-item {
         margin-bottom: 1rem;
     }
 
@@ -121,6 +142,4 @@ const faqs : Array<Faq> =  [
     .answer.active {
         max-height: 500px;
     }
-
-
 </style>
