@@ -76,33 +76,32 @@ const faqs: Array<Faq> = [
     <div class="questions w-full lg:w-1/2 mx-auto">
         <div class="accordion">
             {
-                faqs.map((faq, index) => {
-                    return (
-                        <div
-                            class="accordion-item"
-                            data-aos={`${
-                                index % 2 ? "fade-right" : "fade-left"
-                            }`}
-                        >
-                            <p
-                                class="accordion-link text-white text-lg font-normal leading-10 tracking-wide"
-                                data-target={`accordion-${index}`}
-                            >
-                                {faq.question}
-                            </p>
-                            <div
-                                class="answer active"
-                                data-item={`accordion-${index}`}
-                            >
-                                <p class="text-white/60 text-md font-normal tracking-wide mt-4">
-                                    {faq.answer}
-                                </p>
-                            </div>
-                            <hr class="border-white/50 my-4" />
-                        </div>
-                    );
-                })
-            }
+                faqs.map((faq, index) => (
+                  <div
+                    class="accordion-item"
+                    data-aos={`${
+                      index % 2 ? "fade-right" : "fade-left"
+                    }`}
+                  >
+                      <p
+                        class="accordion-link text-white text-lg font-normal leading-10 tracking-wide"
+                        data-target={`accordion-${index}`}
+                      >
+                          {faq.question}
+                      </p>
+                      <div
+                        class="answer active"
+                        data-item={`accordion-${index}`}
+                      >
+                          <p class="text-white/60 text-md font-normal tracking-wide mt-4">
+                              {faq.answer}
+                          </p>
+                      </div>
+                      <hr class="border-white/50 my-4"/>
+                  </div>
+                )
+                )
+                }
         </div>
     </div>
 </section>
