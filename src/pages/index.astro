@@ -1,1 +1,53 @@
-<meta http-equiv="refresh" content="0;url=/sk/" />
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Navbar from "../components/Navbar.astro";
+import Services from "../components/Services.astro";
+import Plan from "../components/Plan.astro";
+import Portfolio from "../components/Portfolio.astro";
+import MovingTags from "../components/MovingTags.astro";
+import Reviews from "../components/Reviews.astro";
+import FAQ from "../components/FAQ.astro";
+import About from "../components/About.astro";
+
+import "../css/fonts.css";
+---
+
+<Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
+	<main class="overflow-hidden">
+		<Navbar mode="black" />
+		<Hero />
+		<Services />
+		<Plan />
+		<Portfolio
+			nextSectionTitle="Zobraziť viac"
+			nextSectionLink="/sk/our-work"
+			count={6}
+		/>
+		<MovingTags />
+		<Reviews />
+		<FAQ />
+		<About />
+		<MovingTags />
+	</main>
+</Layout>
+
+<style></style>
+
+<script>
+	// document.addEventListener("scroll", function() {
+	// 	let navbar = document.getElementById("navbar");
+	// 	let sections = document.querySelectorAll("section");
+	//
+	// 	sections.forEach(function(section) {
+	// 		let sectionRect = section.getBoundingClientRect();
+	//
+	// 		if(sectionRect.top <= navbar.offsetHeight &&
+	// 			sectionRect.bottom >= navbar.offsetHeight) {
+	// 			let navColor = section.getAttribute("data-nav-color");
+	// 			navbar.style.backgroundColor = navColor;
+	//
+	// 		}
+	// 	});
+	// });
+</script>

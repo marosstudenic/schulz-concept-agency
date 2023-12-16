@@ -1,4 +1,10 @@
 ---
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 interface Props {
     mode: string;
 }
@@ -18,19 +24,19 @@ const logoIcon = mode === BLACK ? "/assets/logos/small-logo.svg" : "/assets/logo
 const menu = [
     {
         title:  "služby",
-        href: "/#services"
+        href: translatePath("/#services")
     },
     {
         title: "naše práce",
-        href: "/nase-prace"
+        href: translatePath("/nase-prace")
     },
     {
         title: "Naša cesta",
-        href:"/#about"
+        href: translatePath("/#about")
     },
     {
         title: "Kontakt",
-        href: "/contact"
+        href: translatePath("/contact")
     }
 ]
 ---
@@ -40,7 +46,7 @@ const menu = [
     <div
         class="container flex justify-between items-center lg:gap-20 gap-10 lg:py-4 py-2 mx-auto px-4"
     >
-        <a href="/">
+        <a href={translatePath("/")}>
             <img src={logoIcon} alt="logo schulz concept" class="h-7 object-contain pr-2"/>
         </a>
 
@@ -79,7 +85,7 @@ const menu = [
         </label>
 
         <div class="hidden lg:block">
-            <a href="/contact">
+            <a href={translatePath("/contact")}>
                 <p
                         class=`text-md text-center uppercase ${fontColorClass} tracking-wide pt-2`
                 >
