@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import MovingTags from "../../components/MovingTags.astro";
+import Footer from "../../components/Footer.astro";
+import HeroHeadingContact from "../../components/HeroHeadingContact.astro";
+import ContactInfo from "../../components/ContactInfo.astro";
+import Formular from "../../components/Formular";
+---
+
+<Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
+    <main class="overflow-hidden">
+        <Navbar mode="white" />
+        <HeroHeadingContact />
+        <Formular client:load />
+        <ContactInfo />
+        <MovingTags />
+    </main>
+</Layout>
+
+<style></style>

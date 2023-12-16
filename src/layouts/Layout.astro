@@ -1,15 +1,19 @@
---- 
+---
+import LanguagePicker from "../components/LanguagePicker.astro";
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
 import '../css/fonts.css';
+import { getLangFromUrl } from '../i18n/utils';
+import Footer from "../components/Footer.astro";
 
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Schulz Concept Agency - Vyriešime za vás web, design a firemnú identitu">
@@ -24,6 +28,7 @@ import '../css/fonts.css';
 	</head>
 	<body class="font-nhaas-dspro">
 		<slot />
+		<Footer />
 		<script src="../js/main.js"></script>
 	</body>
 </html>
