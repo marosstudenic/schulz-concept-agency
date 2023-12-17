@@ -11,11 +11,17 @@ import FAQ from "../components/FAQ.astro";
 import About from "../components/About.astro";
 
 import "../css/fonts.css";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 import AstroConfig from "../../astro.config.mjs";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const translatedPath = useTranslatedPath(lang);
 ---
 
 <Layout title={t("meta.home.title")} description={t("meta.home.description")}>
@@ -26,7 +32,7 @@ const t = useTranslations(lang);
     <Plan />
     <Portfolio
       nextSectionTitle={t("extra.show-more")}
-      nextSectionLink="/sk/our-work"
+      nextSectionLink={translatedPath("/our-work")}
       count={6}
     />
     <MovingTags />

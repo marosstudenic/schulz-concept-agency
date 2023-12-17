@@ -1,47 +1,58 @@
 ---
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const transtatedPath = useTranslatedPath(lang);
 
 // duplicate this array 10 times and join into line1
 const line1 = new Array(10).fill(t("rolling-text.line-1")).flat();
 const line2 = new Array(10).fill(t("rolling-text.line-2")).flat();
 ---
+
 <section class="py-32 w-full overflow-hidden">
-    <a href="/contact">
+  <a href={transtatedPath("/contact")}>
     <div class="flex gap-20 animation-row-left">
-        {
-            line1?.map((line, index) => (
-            <p class="text-white text-4xl font-semibold uppercase tracking-widest" set:html={line}/>
+      {
+        line1?.map((line, index) => (
+          <p
+            class="text-white text-4xl font-semibold uppercase tracking-widest"
+            set:html={line}
+          />
         ))
-        }
+      }
     </div>
-        <div class="flex gap-20 animation-row-right my-4 ">
-            {
-                line2?.map((line, index) => (
-                  <p class="text-white text-4xl font-semibold uppercase tracking-widest" set:html={line}/>
-                ))
-            }
-        </div>
-    </a>
+    <div class="flex gap-20 animation-row-right my-4">
+      {
+        line2?.map((line, index) => (
+          <p
+            class="text-white text-4xl font-semibold uppercase tracking-widest"
+            set:html={line}
+          />
+        ))
+      }
+    </div>
+  </a>
 </section>
 
-
 <style>
-    .animation-row-left {
-        animation: row 20s linear infinite;
-    }
+  .animation-row-left {
+    animation: row 20s linear infinite;
+  }
 
-    .animation-row-right {
-        animation: row 20s linear infinite reverse;
-    }
+  .animation-row-right {
+    animation: row 20s linear infinite reverse;
+  }
 
-    @keyframes row {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
+  @keyframes row {
+    0% {
+      transform: translateX(0);
     }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 </style>

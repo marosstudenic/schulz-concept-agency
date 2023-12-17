@@ -10,7 +10,7 @@ export const hero = {
   "hero.title":
     'Creative <br class="lg:hidden"/> Visual Identity <br>and Successful Branding',
   "hero.subtitle":
-    ',"From Concept <br class="hidden lg:inline">to Successful Collaboration"',
+    '"From Concept <br class="hidden lg:inline">to Successful Collaboration"',
   "hero.want-to-be-next": "Want to be <br/>the next one?",
 };
 
