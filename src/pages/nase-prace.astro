@@ -4,19 +4,26 @@ import MovingTags from "../components/MovingTags.astro";
 import Portfolio from "../components/Portfolio.astro";
 import Layout from "../layouts/Layout.astro";
 import HeroHeading from "../components/HeroHeading.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
-    <main class="overflow-hidden">
-        <Navbar mode="white" />
-        <HeroHeading />
-        <Portfolio
-            extended="true"
-            hasTopRadius="false"
-            nextSectionTitle="Kontakt"
-            nextSectionLink="/contact"
-            count={10}
-        />
-        <MovingTags />
-    </main>
+<Layout
+  title={t("meta.our-work.title")}
+  description={t("meta.our-work.description")}
+>
+  <main class="overflow-hidden">
+    <Navbar mode="white" />
+    <HeroHeading />
+    <Portfolio
+      extended="true"
+      hasTopRadius="false"
+      nextSectionTitle="Kontakt"
+      nextSectionLink="/contact"
+      count={10}
+    />
+    <MovingTags />
+  </main>
 </Layout>

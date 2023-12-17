@@ -1,6 +1,7 @@
 ---
 import PortfolioItem from "./Portfolio/PortfolioItem.astro";
 import { HeadingSection } from "../components/Heading";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 interface Props {
     hasTopRadius?: boolean;
@@ -16,63 +17,11 @@ type PortfolioItemType = {
     img: string;
 };
 
-const items: Array<PortfolioItemType> = [
-    {
-        title: "Vinařství U Nešporů",
-        description:
-            "Logomanuál / Balenie /  Vizitky / Potlač na auto / Etikety",
-        img: "/assets/images/sauvignon-1.png",
-    },
-    {
-        title: "TK Medical",
-        description:
-            "Logomanuál / Balenie /  Vizitky / Infografika / Potlač na nákladné autá",
-        img: "/assets/images/tk-medical-mockup.png",
-    },
-    {
-        title: "Nasdomov.sk katalog",
-        description: "Webová stránka",
-        img: "/assets/images/macbook-pro-mockup-light-1.png",
-    },
-    {
-        title: "Jesličky",
-        description:
-            "Webová stránka / Cedulky na dvere / Vizitky / A4 papier / Logo / Sociálne siete",
-        img: "/assets/images/jeslicky.png",
-    },
-    {
-        title: "Design na hranici",
-        description: "Plagáty / Vstupenky / Merch / Letáky / Tašky / Samolepky",
-        img: "/assets/images/na-hranici.jpeg",
-    },
-    {
-        title: "Výstava Identity",
-        description:
-            "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
-        img: "/assets/images/identity.png",
-    },
-    {
-        title: "SEAWEED",
-        description: "Mobilné aplikácie / Etikety",
-        img: "/assets/images/seaweed.png",
-    },
-    {
-        title: "Výstava Identity",
-        description:
-            "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
-        img: "/assets/images/vystava-identity-mobile.png",
-    },
-    {
-        title: "Kniha Alchymista",
-        description: "Ilustrácie",
-        img: "/assets/images/kniha-alchymista.png",
-    },
-    {
-        title: "Kalendár",
-        description: "Digitálna ilustrácia / Vlastné štetce",
-        img: "/assets/images/kalendar.png",
-    },
-];
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const items: Array<PortfolioItemType> = t('portfolio.items') as Array<PortfolioItemType>;
+
 
 const { hasTopRadius, extended, nextSectionLink, nextSectionTitle, count } =
     Astro.props;
@@ -81,14 +30,22 @@ const roundedClass = hasTopRadius
     ? "rounded-b-3xl lg:rounded-b-[60px]"
     : "rounded-3xl lg:rounded-[60px]";
 
-
 ---
 
 <section class=`bg-white ${roundedClass} py-8 lg:py-16` id="portfolio">
     <div
         class="container px-4 lg:px-12 mx-auto flex flex-col justify-center items-center gap-2"
     >
-        <HeadingSection extended={extended}/>
+
+        { extended && <div class="px-8 py-2 mb-12 rounded-[5px] bg-[#F7F7F7] my-4">
+            <p class="text-sm text-center text-black/50">
+                {t('portfolio.title')}
+            </p>
+        </div>}
+
+        { !extended && <p class="text-center lg:text-left uppercase text-black/50 w-full mb-10">
+            {t('portfolio.title')}
+        </p> }
 
         <div class="grid grid-cols-1 lg:grid-cols-2 justify-between gap-10">
             {

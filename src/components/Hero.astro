@@ -1,18 +1,24 @@
 ---
+
+import { useTranslations} from "../i18n/utils";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="container mx-auto lg:px-12 px-4">
     <div class="flex flex-col lg:flex-row justify-between py-8 mt-4 mb-4 lg:mt-16 lg:mb-32 relative z-10">
         <div class="lg:py-8 py-2 z-10" data-aos="fade-right">
             <p class="lg:text-left uppercase text-white text-center py-4 text-lg hidden lg:block">SCHULZ CONCEPT</p>
-            <p class="lg:text-left text-center text-white text-4xl lg:text-6xl lg:pb-80 pt-12 lg:pt-0 !leading-[1.2em] font-bold">
-                Kreatívna <br class="lg:hidden"/> vizuálna identita <br>a&nbsp;úspešný branding
-            </p>
+            <p class="lg:text-left text-center text-white text-4xl lg:text-6xl lg:pb-80 pt-12 lg:pt-0 !leading-[1.2em] font-bold"
+               set:html={t("hero.title")} />
         </div>
         <div class="flex flex-col justify-end z-0" data-aos="fade-left">
-            <p class="text-center lg:text-right text-white lg:text-[33px] text-lg pt-4 pb-12 lg:py-0 leading-normal">
-                ,,Od conceptu <br class="hidden lg:inline">po úspešnú spoluprácu”
-            </p>
+            <p class="text-center lg:text-right text-white lg:text-[33px] text-lg pt-4 pb-12 lg:py-0 leading-normal"
+                set:html={t("hero.subtitle")} />
+            />
+
         </div>
 
         <!-- LOGO S -->
@@ -32,9 +38,8 @@
         <img src="/assets/images/pk-machinery.png" alt="" class="h-24 w-36 object-contain"/>
         <div class="flex flex-col justify-center">
             <a href="/contact">
-                <p class="text-center text-white/40 text-md font-bold uppercase">
-                    Chceš&nbsp;byť<br/>ďalší&nbsp;ty&nbsp;?
-                </p>
+                <p class="text-center text-white/40 text-md font-bold uppercase"
+                   set:html={t('hero.want-to-be-next')}/>
                 <!--<img src="assets/decorations/underline.svg" alt="decoration of text" class="w-full"/>-->
             </a>
         </div>

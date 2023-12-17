@@ -1,6 +1,5 @@
 ---
-
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, useTranslatedPath, getRouteFromUrl } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,19 +22,19 @@ const logoIcon = mode === BLACK ? "/assets/logos/small-logo.svg" : "/assets/logo
 
 const menu = [
     {
-        title:  "služby",
+        title:  t('nav.services'),
         href: translatePath("/#services")
     },
     {
-        title: "naše práce",
-        href: translatePath("/nase-prace")
+        title: t('nav.our-work'),
+        href: translatePath("/our-work")
     },
     {
-        title: "Naša cesta",
+        title: t('nav.journey'),
         href: translatePath("/#about")
     },
     {
-        title: "Kontakt",
+        title: t('nav.contact'),
         href: translatePath("/contact")
     }
 ]
@@ -87,9 +86,8 @@ const menu = [
         <div class="hidden lg:block">
             <a href={translatePath("/contact")}>
                 <p
-                        class=`text-md text-center uppercase ${fontColorClass} tracking-wide pt-2`
+                        class=`text-md text-center uppercase ${fontColorClass} tracking-wide pt-2` set:html={t('nav.text-us')}
                 >
-                    Napíš&nbsp;nám
                 </p>
                 <img src="/assets/decorations/underline.svg" alt="underline" class="w-full"/>
 

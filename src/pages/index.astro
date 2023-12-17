@@ -11,43 +11,48 @@ import FAQ from "../components/FAQ.astro";
 import About from "../components/About.astro";
 
 import "../css/fonts.css";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import AstroConfig from "../../astro.config.mjs";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Schulz Concept Agency - Postaráme sa o Vášu online identitu.">
-	<main class="overflow-hidden">
-		<Navbar mode="black" />
-		<Hero />
-		<Services />
-		<Plan />
-		<Portfolio
-			nextSectionTitle="Zobraziť viac"
-			nextSectionLink="/sk/our-work"
-			count={6}
-		/>
-		<MovingTags />
-		<Reviews />
-		<FAQ />
-		<About />
-		<MovingTags />
-	</main>
+<Layout title={t("meta.home.title")} description={t("meta.home.description")}>
+  <main class="overflow-hidden">
+    <Navbar mode="black" />
+    <Hero />
+    <Services />
+    <Plan />
+    <Portfolio
+      nextSectionTitle={t("extra.show-more")}
+      nextSectionLink="/sk/our-work"
+      count={6}
+    />
+    <MovingTags />
+    <Reviews />
+    <FAQ />
+    <About />
+    <MovingTags />
+  </main>
 </Layout>
 
 <style></style>
 
 <script>
-	// document.addEventListener("scroll", function() {
-	// 	let navbar = document.getElementById("navbar");
-	// 	let sections = document.querySelectorAll("section");
-	//
-	// 	sections.forEach(function(section) {
-	// 		let sectionRect = section.getBoundingClientRect();
-	//
-	// 		if(sectionRect.top <= navbar.offsetHeight &&
-	// 			sectionRect.bottom >= navbar.offsetHeight) {
-	// 			let navColor = section.getAttribute("data-nav-color");
-	// 			navbar.style.backgroundColor = navColor;
-	//
-	// 		}
-	// 	});
-	// });
+  // document.addEventListener("scroll", function() {
+  // 	let navbar = document.getElementById("navbar");
+  // 	let sections = document.querySelectorAll("section");
+  //
+  // 	sections.forEach(function(section) {
+  // 		let sectionRect = section.getBoundingClientRect();
+  //
+  // 		if(sectionRect.top <= navbar.offsetHeight &&
+  // 			sectionRect.bottom >= navbar.offsetHeight) {
+  // 			let navColor = section.getAttribute("data-nav-color");
+  // 			navbar.style.backgroundColor = navColor;
+  //
+  // 		}
+  // 	});
+  // });
 </script>

@@ -1,45 +1,64 @@
 ---
-import LanguagePicker from "./LanguagePicker.astro";---
+import LanguagePicker from "./LanguagePicker.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <footer id="contact" class="container mx-auto py-4 lg:py-20 px-4">
-    <p class="text-white text-opacity-50 text-md font-medium uppercase tracking-widest py-2">RADI VÁM POMÔŽEME</p>
-    <div class="flex  flex-col lg:flex-row justify-between pb-10">
-        <div class="flex flex-col lg:flex-row justify-start  gap-5 lg:gap-5 align-middle">
-            <div class="locations text-white">
-                <p>Bratislava</p>
-                <p>Malacky</p>
-                <p>Brno</p>
-                <p>Zlín</p>
-            </div>
-            <div class="flex flex-col text-white justify-end">
-                <p><b>mail</b></p>
-                <a href="mailto:concept@schulzconcept.eu">concept@schulzconcept.eu</a>
-            </div>
-            <div class="flex flex-col text-white justify-end">
-                <p><b>telefón</b></p>
-                <a href="tel:+421911602282">+421 911 602 282</a>
-            </div>
-            <div class="flex flex-col text-white justify-end">
-                <!--TODO add fb link-->
-                <div class="flex text-white justify-center gap-5">
-                    <a href="https://facebook.com">
-                        <img src="/assets/logos/facebook-logo.png" alt="facebook logo" class="h-6 w-auto object-contain"/>
-                    </a>
+  <p
+    class="text-white text-opacity-50 text-md font-medium uppercase tracking-widest py-2"
+  >
+    {t("footer.title")}
+  </p>
+  <div class="flex flex-col lg:flex-row justify-between pb-10">
+    <div
+      class="flex flex-col lg:flex-row justify-start gap-5 lg:gap-5 align-middle"
+    >
+      <div class="locations text-white">
+        <p>Bratislava</p>
+        <p>Malacky</p>
+        <p>Brno</p>
+        <p>Zlín</p>
+      </div>
+      <div class="flex flex-col text-white justify-end">
+        <p><b>mail</b></p>
+        <a href="mailto:concept@schulzconcept.eu">concept@schulzconcept.eu</a>
+      </div>
+      <div class="flex flex-col text-white justify-end">
+        <p><b>{t("footer.phone")}</b></p>
+        <a href="tel:+421911602282">+421 911 602 282</a>
+      </div>
+      <div class="flex flex-col text-white justify-end">
+        <!--TODO add fb link-->
+        <div class="flex text-white justify-center gap-5">
+          <a href="https://facebook.com">
+            <img
+              src="/assets/logos/facebook-logo.png"
+              alt="facebook logo"
+              class="h-6 w-auto object-contain"
+            />
+          </a>
 
-                    <a href="https://instagram.com">
-                        <img src="/assets/logos/instagram-logo.png" alt="instagram logo" class="h-6 w-auto object-contain"/>
-                    </a>
-                </div>
-            </div>
-
+          <a href="https://instagram.com">
+            <img
+              src="/assets/logos/instagram-logo.png"
+              alt="instagram logo"
+              class="h-6 w-auto object-contain"
+            />
+          </a>
         </div>
-        <div class="flex flex-col justify-end gap-2 lg:gap-10 mt-4 lg:mt-0">
-            <div class="flex text-white flex-col lg:flex-row justify-end align-bottom gap-2">
-                <p class="text-center">© 2023 Schulz Concept s.r.o.</p>
-                <p class="text-center">Všetky práva vyhradené ©</p>
-            </div>
-        </div>
+      </div>
     </div>
-    <LanguagePicker/>
-
-
+    <div class="flex flex-col justify-end gap-2 lg:gap-10 mt-4 lg:mt-0">
+      <div
+        class="flex text-white flex-col lg:flex-row justify-end align-bottom gap-2"
+      >
+        <p class="text-center">© 2023 Schulz Concept s.r.o.</p>
+        <p class="text-center">{t("footer.reserved")}</p>
+      </div>
+    </div>
+  </div>
+  <LanguagePicker />
 </footer>

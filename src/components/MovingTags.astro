@@ -1,179 +1,28 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
+// duplicate this array 10 times and join into line1
+const line1 = new Array(10).fill(t("rolling-text.line-1")).flat();
+const line2 = new Array(10).fill(t("rolling-text.line-2")).flat();
+---
 <section class="py-32 w-full overflow-hidden">
     <a href="/contact">
     <div class="flex gap-20 animation-row-left">
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Zavolaj&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Poradíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Napíš&nbsp;nám</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Naučíme</>
+        {
+            line1?.map((line, index) => (
+            <p class="text-white text-4xl font-semibold uppercase tracking-widest" set:html={line}/>
+        ))
+        }
     </div>
-
-    <div class="flex gap-20 animation-row-right my-8 ">
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Stretneme&nbsp;sa</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Vysvetlíme</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Kontaktuj&nbsp;nás</>
-        <p class="text-white text-4xl font-semibold uppercase tracking-widest">Objasníme</>
-    </div>
+        <div class="flex gap-20 animation-row-right my-4 ">
+            {
+                line2?.map((line, index) => (
+                  <p class="text-white text-4xl font-semibold uppercase tracking-widest" set:html={line}/>
+                ))
+            }
+        </div>
     </a>
 </section>
 

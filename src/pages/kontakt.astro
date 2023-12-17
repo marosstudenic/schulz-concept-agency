@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import MovingTags from "../components/MovingTags.astro";
+import HeroHeadingContact from "../components/HeroHeadingContact.astro";
+import ContactInfo from "../components/ContactInfo.astro";
+import Formular from "../components/Formular";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout
+  title={t("meta.contact.title")}
+  description={t("meta.contact.description")}
+>
+  <main class="overflow-hidden">
+    <Navbar mode="white" />
+    <HeroHeadingContact />
+    <Formular client:load lang={lang} />
+    <ContactInfo />
+    <MovingTags />
+  </main>
+</Layout>
+
+<style></style>

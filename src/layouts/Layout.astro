@@ -1,12 +1,13 @@
 ---
 import LanguagePicker from "../components/LanguagePicker.astro";
 interface Props {
-	title: string;
+  title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
-import '../css/fonts.css';
-import { getLangFromUrl } from '../i18n/utils';
+const { title, description } = Astro.props;
+import "../css/fonts.css";
+import { getLangFromUrl } from "../i18n/utils";
 import Footer from "../components/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -14,56 +15,76 @@ const lang = getLangFromUrl(Astro.url);
 
 <!DOCTYPE html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Schulz Concept Agency - Vyriešime za vás web, design a firemnú identitu">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg" href="/assets/logos/logo-small-1.svg" id="link-icon"/>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
-		<!--<meta name="generator" content={Astro.generator} />-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="/assets/logos/logo-small-1.svg"
+      id="link-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!--<meta name="generator" content={Astro.generator} />-->
 
-		<title>{title}</title>
-	</head>
-	<body class="font-nhaas-dspro">
-		<slot />
-		<Footer />
-		<script src="../js/main.js"></script>
-	</body>
+    <title>{title}</title>
+  </head>
+  <body class="font-nhaas-dspro">
+    <slot />
+    <Footer />
+    <script src="../js/main.js"></script>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #000;
-		background-size: 224px;
-		scroll-behavior: smooth;
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
 
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	body {
-		overflow-x: hidden;
-		width: 100vw;
-	}
+  html {
+    font-family: system-ui, sans-serif;
+    background: #000;
+    background-size: 224px;
+    scroll-behavior: smooth;
+  }
 
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
 </style>
 
-
 <script>
-	let favIconIndex = 0;
-	const favIcons = ['/assets/logos/logo-small-1.svg', '/assets/logos/logo-small-2.svg', "/assets/logos/logo-small-3.svg"];
-	setInterval(()=> {
-		document.getElementById('link-icon').setAttribute('href', favIcons[favIconIndex]);
-		favIconIndex++;
-		if (favIconIndex >= favIcons.length) favIconIndex = 0;
-	}, 500);
+  let favIconIndex = 0;
+  const favIcons = [
+    "/assets/logos/logo-small-1.svg",
+    "/assets/logos/logo-small-2.svg",
+    "/assets/logos/logo-small-3.svg",
+  ];
+  setInterval(() => {
+    document
+      .getElementById("link-icon")
+      .setAttribute("href", favIcons[favIconIndex]);
+    favIconIndex++;
+    if (favIconIndex >= favIcons.length) favIconIndex = 0;
+  }, 500);
 </script>

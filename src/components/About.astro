@@ -1,94 +1,91 @@
 ---
 import AboutItem from "./About/AboutItem.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
-<section class="bg-white py-20 rounded-3xl lg:rounded-[60px] overflow-x-hidden"
-         id="about">
-    <div class="container mx-auto px-4 lg:px-12" data-aos="fade-up">
 
-        <p class="text-black text-opacity-50 text-center md:text-left  pb-4">NAŠA CESTA</p>
-        <div class="flex justify-center items-center flex-col gap-16">
-            <img src="/assets/logos/logo-blue.png" alt="logo samo schulz" class="h-10"/>
-            <div class="py-20">
-                <h3 class="text-center text-black text-6xl font-norma ">SCHULZ CONCEPT</h3>
-                <p class="text-center text-black text-opacity-50  font-normal tracking-wide">SCHULZ CONCEPT AGENCY </p>
-            </div>
+<section
+  class="bg-white py-20 rounded-3xl lg:rounded-[60px] overflow-x-hidden"
+  id="about"
+>
+  <div class="container mx-auto px-4 lg:px-12" data-aos="fade-up">
+    <p class="text-black text-opacity-50 text-center md:text-left pb-4">
+      {t("journey.title")}
+    </p>
+    <div class="flex justify-center items-center flex-col gap-16">
+      <img
+        src="/assets/logos/logo-blue.png"
+        alt="logo samo schulz"
+        class="h-10"
+      />
+      <div class="py-20">
+        <h3 class="text-center text-black text-6xl font-norma">
+          SCHULZ CONCEPT
+        </h3>
+        <p
+          class="text-center text-black text-opacity-50 font-normal tracking-wide"
+        >
+          SCHULZ CONCEPT AGENCY
+        </p>
+      </div>
 
-            <p class="text-left lg:text-justify text-lg w-full lg:w-1/2 ">
-                Vítame vás v našom kreatívnom svete, kde zážitok prekračuje hranice obyčajného. Sme tu, aby sme
-                prekonali očakávania a priniesli vášmu svetu nové možnosti. Vďaka 7 rokmi skúseností a množstvom
-                úspešných projektov sme sa stali správnym partnerom pre vaše kreatívne ambície. Našim cieľom je nie len
-                dosiahnuť štandardy dneška, ale tvoriť tie zajtrajška. Každý projekt je pre nás príbeh a každý klient je
-                partner. Našim partnerom otvárame brány k najodvážnejším transformáciám, začínajúc strategickým
-                plánovaním, pokračujúc tvorbou značky a končiac v digitálnych zážitkoch. Naša filozofia sa sústreďuje na
-                vytváranie budúcich víťazov, a to skrze správne otázky, ambiciózne ciele a odhaľovanie výnimočnosti v
-                našich partneroch.
-            </p>
+      <p class="text-left lg:text-justify text-lg w-full lg:w-1/2">
+        {t("journey.description")}
+      </p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <AboutItem title="Branding" side="right"
-                           description="Vaša značka je príbeh, ktorý chceme spolu napísať. Tvoríme vizuálne a emočné silné vizuálne identity značiek, ktoré dokážu oslovovať a oduševňovať. Či už ide o vytvorenie nového brandu alebo o rebranding, plán je jasný. Od strategického plánovania až po konkrétne kroky, spolu presúvame vašu značku dopredu. "/>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <AboutItem title="Marketing"
-                           description="Vaša značka potrebuje hlas a my jej ho dáme. Zjednodušujeme marketing a vytvárame marketingové stratégie na mieru. Tvoríme obsah, spolupracujeme s influencermi a vytvárame kampane, ktoré oslovujú a zapájajú vašu cieľovú skupinu."
-                           side="left"/>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <AboutItem title="Web a Aplikácie" side="right"
-                           description="Naším cieľom je vytvárať nielen estetické, ale aj funkčné webové stránky a aplikácie.  Informačné webovky, blog, E-shop či stránky pro značky a firmy, aplikáciea systémy na pc alebo telefón. To všetko je možnosť, ako vám vieme pomôcť. Projekt pre nás znamená nový príbeh a novú možnosť priblížiť vašu značku svetu."/>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <AboutItem title="Grafika" side="left"
-                           description="Logo, farby, typografia, animácia, dizajn v akomkoľvek zmysle slova - tieto prvky spájame do vizuálnej identity, ktorá hovorí o vašej značke viac než tisíc slov. Každý detail má svoj význam."/>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <div>
-                    <!--    emtpy-->
-                </div>
-                <AboutItem title="Merchandising" side="right"
-                           description="Chcete vlastný designový merch alebo kreatívny darček s inovatívnym balením? Pripravujete udalosť a chcete vašim zákazníkom ponúknuť zaujímavý pamiatkový predmet ako napr. tričko s vašim designom a logom? Naše produkty nesú v sebe umenie a tvorivosť. Sú to diela, ktoré môžete nosiť so sebou a zdieľať s ostatnými."/>
-            </div>
-
-            <!--<div class="mt-10 mb-6">-->
-            <!--    <p class="text-xl text-center text-black/50">ĎALEJ NA</p>-->
-
-            <!--    <a class="cursor-pointer" href="/portfolio">-->
-            <!--        <p class="text-2xl text-center uppercase text-black pt-4">-->
-            <!--            Zobraziť viac-->
-            <!--        </p>-->
-            <!--        <svg-->
-            <!--                width="185"-->
-            <!--                height="18"-->
-            <!--                viewBox="0 0 185 18"-->
-            <!--                fill="none"-->
-            <!--                xmlns="http://www.w3.org/2000/svg"-->
-            <!--                class=""-->
-            <!--                preserveAspectRatio="none"-->
-            <!--        >-->
-            <!--            <path-->
-            <!--                    d="M0.5 11.0588C71.7147 4.37113 111.931 2.25282 184.5 2C132.527 6.74663 103.82 9.48176 62.1268 16C87.4849 14.483 101.588 13.9057 125.514 16"-->
-            <!--                    stroke="#000AFF"-->
-            <!--                    stroke-width="3"-->
-            <!--            ></path>-->
-            <!--        </svg>-->
-            <!--    </a>-->
-
-            <!--</div>-->
-
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <AboutItem
+          title={t("journey.branding.title")}
+          side="right"
+          description={t("journey.branding.description")}
+        />
+        <div>
+          <!--    emtpy-->
         </div>
+        <div>
+          <!--    emtpy-->
+        </div>
+        <AboutItem
+          title={t("journey.marketing.title")}
+          description={t("journey.marketing.description")}
+          side="left"
+        />
+        <div>
+          <!--    emtpy-->
+        </div>
+        <div>
+          <!--    emtpy-->
+        </div>
+        <AboutItem
+          title={t("journey.web.title")}
+          side="right"
+          description={t("journey.web.description")}
+        />
+        <div>
+          <!--    emtpy-->
+        </div>
+        <div>
+          <!--    emtpy-->
+        </div>
+        <AboutItem
+          title={t("journey.design.title")}
+          side="left"
+          description={t("journey.design.description")}
+        />
+        <div>
+          <!--    emtpy-->
+        </div>
+        <div>
+          <!--    emtpy-->
+        </div>
+        <AboutItem
+          title={t("journey.merch.title")}
+          side="right"
+          description={t("journey.merch.description")}
+        />
+      </div>
     </div>
-
+  </div>
 </section>

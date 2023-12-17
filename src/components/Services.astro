@@ -1,44 +1,15 @@
 ---
 import ServiceItem from "./ServiceItem.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 interface ServiceItemType {
     title: string;
     description: string;
 }
-const services: Array<ServiceItemType> = [
-    {
-        title: "Branding",
-        description: "Brand identita / Tvorba loga / Názov značky / Rebranding / Brand audit"
-    },
-    {
-        title: "Marketing",
-        description: "Marketingové stratégie / Sociálne siete / Spolupráca s influencermi / SEO / PPC  / Copywriting"
-    },
-    {
-        title: "Web development",
-        description: "Web na mieru / E-shop / SEO / Optimalizácia / Wordpress  / WooComerce  / Platobné brány"
-    },
-    {
-        title: "Aplikácie",
-        description: "Webové a mobilné aplikácie / Vývoj a tvorba / Systémy na mieru / CRM / App store SEO / Testovanie"
-    },
-    {
-        title: "UI / UX",
-        description: "Wireframe / Prototyp / IA"
-    },
-    {
-        title: "Grafický design",
-        description: "Tlačená grafika / Vizuálna identita / Logo / Plagáty / Ilustrácie / Animácie / 3D"
-    },
-    {
-        title: "Merch",
-        description: "Potlač textilu / Doplnky / Balenie / Celoplošný potlač / Návrh vzorov na látku"
-    },
-    {
-        title: "Naše know-how",
-        description: "Zadarmo / E-book  / Newsletter"
-    }
-]
 
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const services: Array<ServiceItemType> = t('services.items') as Array<ServiceItemType>;
 ---
 
 <section class="bg-white rounded-3xl lg:rounded-[60px] lg:py-16 mt-12" id="services" data-nav-color="white">
