@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.3",
     "@astrojs/renderer-react": "^0.5.0",
+    "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^4.0.0",
     "@material-tailwind/html": "^2.0.0",
     "@material-tailwind/react": "^2.1.1",
