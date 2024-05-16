@@ -67,12 +67,12 @@ export const plan = {
 export const portfolio = {
   "portfolio.title": "Unsere Arbeit",
   "portfolio.items": [
-    {
-      title: "Weingut U Nešporů",
-      description:
-        "Logo-Handbuch / Verpackung / Visitenkarten / Fahrzeugbedruckung / Etiketten",
-      img: "/assets/images/sauvignon-1.png",
-    },
+    // {
+    //   title: "Weingut U Nešporů",
+    //   description:
+    //     "Logo-Handbuch / Verpackung / Visitenkarten / Fahrzeugbedruckung / Etiketten",
+    //   img: "/assets/images/sauvignon-1.png",
+    // },
     {
       title: "TK Medical",
       description:
@@ -85,44 +85,49 @@ export const portfolio = {
       img: "/assets/images/macbook-pro-mockup-light-1.png",
     },
     {
-      title: "Jesličky",
-      description:
-        "Webseite / Türschilder / Visitenkarten / A4-Papier / Logo / Soziale Netzwerke",
-      img: "/assets/images/jeslicky.png",
-    },
-    {
-      title: "Design am Rand",
-      description:
-        "Poster / Tickets / Merchandise / Flyer / Taschen / Aufkleber",
-      img: "/assets/images/na-hranici.jpeg",
-    },
-    {
-      title: "Ausstellung Identität",
-      description:
-        "Poster / Einladungen / Tickets / Flyer / Taschen / Aufkleber",
-      img: "/assets/images/identity.png",
-    },
-    {
-      title: "SEAWEED",
-      description: "Mobile Anwendungen / Etiketten",
-      img: "/assets/images/seaweed.png",
-    },
-    {
-      title: "Ausstellung Identität",
-      description:
-        "Poster / Einladungen / Tickets / Flyer / Taschen / Aufkleber",
-      img: "/assets/images/vystava-identity-mobile.png",
-    },
-    {
-      title: "Das Buch 'Der Alchimist'",
-      description: "Illustrationen",
-      img: "/assets/images/kniha-alchymista.png",
-    },
-    {
-      title: "Kalender",
-      description: "Digitale Illustration / Eigene Pinsel",
-      img: "/assets/images/kalendar.png",
-    },
+      title: "Sustainable horizons",
+      description: "Webseite",
+      img: "/assets/images/sustainablehorizons.png"
+    }
+    // {
+    //   title: "Jesličky",
+    //   description:
+    //     "Webseite / Türschilder / Visitenkarten / A4-Papier / Logo / Soziale Netzwerke",
+    //   img: "/assets/images/jeslicky.png",
+    // },
+    // {
+    //   title: "Design am Rand",
+    //   description:
+    //     "Poster / Tickets / Merchandise / Flyer / Taschen / Aufkleber",
+    //   img: "/assets/images/na-hranici.jpeg",
+    // },
+    // {
+    //   title: "Ausstellung Identität",
+    //   description:
+    //     "Poster / Einladungen / Tickets / Flyer / Taschen / Aufkleber",
+    //   img: "/assets/images/identity.png",
+    // },
+    // {
+    //   title: "SEAWEED",
+    //   description: "Mobile Anwendungen / Etiketten",
+    //   img: "/assets/images/seaweed.png",
+    // },
+    // {
+    //   title: "Ausstellung Identität",
+    //   description:
+    //     "Poster / Einladungen / Tickets / Flyer / Taschen / Aufkleber",
+    //   img: "/assets/images/vystava-identity-mobile.png",
+    // },
+    // {
+    //   title: "Das Buch 'Der Alchimist'",
+    //   description: "Illustrationen",
+    //   img: "/assets/images/kniha-alchymista.png",
+    // },
+    // {
+    //   title: "Kalender",
+    //   description: "Digitale Illustration / Eigene Pinsel",
+    //   img: "/assets/images/kalendar.png",
+    // },
   ],
 };
 

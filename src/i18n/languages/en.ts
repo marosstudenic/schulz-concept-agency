@@ -67,12 +67,12 @@ export const plan = {
 export const portfolio = {
   "portfolio.title": "Our Work",
   "portfolio.items": [
-    {
-      title: "U Nešporů Winery",
-      description:
-        "Logo manual / Packaging / Business cards / Vehicle print / Labels",
-      img: "/assets/images/sauvignon-1.png",
-    },
+    // {
+    //   title: "U Nešporů Winery",
+    //   description:
+    //     "Logo manual / Packaging / Business cards / Vehicle print / Labels",
+    //   img: "/assets/images/sauvignon-1.png",
+    // },
     {
       title: "TK Medical",
       description:
@@ -85,41 +85,46 @@ export const portfolio = {
       img: "/assets/images/macbook-pro-mockup-light-1.png",
     },
     {
-      title: "Jesličky",
-      description:
-        "Website / Door signs / Business cards / A4 paper / Logo / Social networks",
-      img: "/assets/images/jeslicky.png",
-    },
-    {
-      title: "Design on the Edge",
-      description: "Posters / Tickets / Merchandise / Flyers / Bags / Stickers",
-      img: "/assets/images/na-hranici.jpeg",
-    },
-    {
-      title: "Identity Exhibition",
-      description: "Posters / Invitations / Tickets / Flyers / Bags / Stickers",
-      img: "/assets/images/identity.png",
-    },
-    {
-      title: "SEAWEED",
-      description: "Mobile applications / Labels",
-      img: "/assets/images/seaweed.png",
-    },
-    {
-      title: "Identity Exhibition",
-      description: "Posters / Invitations / Tickets / Flyers / Bags / Stickers",
-      img: "/assets/images/vystava-identity-mobile.png",
-    },
-    {
-      title: "The Alchemist Book",
-      description: "Illustrations",
-      img: "/assets/images/kniha-alchymista.png",
-    },
-    {
-      title: "Calendar",
-      description: "Digital illustration / Custom brushes",
-      img: "/assets/images/kalendar.png",
-    },
+      title: "Sustainable horizons",
+      description: "Website",
+      img: "/assets/images/sustainablehorizons.png"
+    }
+    // {
+    //   title: "Jesličky",
+    //   description:
+    //     "Website / Door signs / Business cards / A4 paper / Logo / Social networks",
+    //   img: "/assets/images/jeslicky.png",
+    // },
+    // {
+    //   title: "Design on the Edge",
+    //   description: "Posters / Tickets / Merchandise / Flyers / Bags / Stickers",
+    //   img: "/assets/images/na-hranici.jpeg",
+    // },
+    // {
+    //   title: "Identity Exhibition",
+    //   description: "Posters / Invitations / Tickets / Flyers / Bags / Stickers",
+    //   img: "/assets/images/identity.png",
+    // },
+    // {
+    //   title: "SEAWEED",
+    //   description: "Mobile applications / Labels",
+    //   img: "/assets/images/seaweed.png",
+    // },
+    // {
+    //   title: "Identity Exhibition",
+    //   description: "Posters / Invitations / Tickets / Flyers / Bags / Stickers",
+    //   img: "/assets/images/vystava-identity-mobile.png",
+    // },
+    // {
+    //   title: "The Alchemist Book",
+    //   description: "Illustrations",
+    //   img: "/assets/images/kniha-alchymista.png",
+    // },
+    // {
+    //   title: "Calendar",
+    //   description: "Digital illustration / Custom brushes",
+    //   img: "/assets/images/kalendar.png",
+    // },
   ],
 };
 
@@ -127,7 +132,7 @@ export const rollingText = {
   "rolling-text.line-1": [
     "Call&nbsp;Us",
     "We'll&nbsp;Advise",
-    "Text&nnbsp;Us",
+    "Text&nbsp;Us",
     "We'll&nbsp;Teach",
   ],
   "rolling-text.line-2": [

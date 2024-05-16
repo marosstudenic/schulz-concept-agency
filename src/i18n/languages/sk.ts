@@ -67,11 +67,11 @@ export const plan = {
 export const portfolio = {
   "portfolio.title": "Naše práce",
   "portfolio.items": [
-    {
-      title: "Vinařství U Nešporů",
-      description: "Logomanuál / Balenie /  Vizitky / Potlač na auto / Etikety",
-      img: "/assets/images/sauvignon-1.png",
-    },
+    // {
+    //   title: "Vinařství U Nešporů",
+    //   description: "Logomanuál / Balenie /  Vizitky / Potlač na auto / Etikety",
+    //   img: "/assets/images/sauvignon-1.png",
+    // },
     {
       title: "TK Medical",
       description:
@@ -84,43 +84,48 @@ export const portfolio = {
       img: "/assets/images/macbook-pro-mockup-light-1.png",
     },
     {
-      title: "Jesličky",
-      description:
-        "Webová stránka / Cedulky na dvere / Vizitky / A4 papier / Logo / Sociálne siete",
-      img: "/assets/images/jeslicky.png",
-    },
-    {
-      title: "Design na hranici",
-      description: "Plagáty / Vstupenky / Merch / Letáky / Tašky / Samolepky",
-      img: "/assets/images/na-hranici.jpeg",
-    },
-    {
-      title: "Výstava Identity",
-      description:
-        "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
-      img: "/assets/images/identity.png",
-    },
-    {
-      title: "SEAWEED",
-      description: "Mobilné aplikácie / Etikety",
-      img: "/assets/images/seaweed.png",
-    },
-    {
-      title: "Výstava Identity",
-      description:
-        "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
-      img: "/assets/images/vystava-identity-mobile.png",
-    },
-    {
-      title: "Kniha Alchymista",
-      description: "Ilustrácie",
-      img: "/assets/images/kniha-alchymista.png",
-    },
-    {
-      title: "Kalendár",
-      description: "Digitálna ilustrácia / Vlastné štetce",
-      img: "/assets/images/kalendar.png",
-    },
+      title: "Sustainable horizons",
+      description: "webová stránka",
+      img: "/assets/images/sustainablehorizons.png"
+    }
+    // {
+    //   title: "Jesličky",
+    //   description:
+    //     "Webová stránka / Cedulky na dvere / Vizitky / A4 papier / Logo / Sociálne siete",
+    //   img: "/assets/images/jeslicky.png",
+    // },
+    // {
+    //   title: "Design na hranici",
+    //   description: "Plagáty / Vstupenky / Merch / Letáky / Tašky / Samolepky",
+    //   img: "/assets/images/na-hranici.jpeg",
+    // },
+    // {
+    //   title: "Výstava Identity",
+    //   description:
+    //     "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
+    //   img: "/assets/images/identity.png",
+    // },
+    // {
+    //   title: "SEAWEED",
+    //   description: "Mobilné aplikácie / Etikety",
+    //   img: "/assets/images/seaweed.png",
+    // },
+    // {
+    //   title: "Výstava Identity",
+    //   description:
+    //     "Plagáty / Pozvánky / Vstupenky / Letáky / Tašky / Samolepky",
+    //   img: "/assets/images/vystava-identity-mobile.png",
+    // },
+    // {
+    //   title: "Kniha Alchymista",
+    //   description: "Ilustrácie",
+    //   img: "/assets/images/kniha-alchymista.png",
+    // },
+    // {
+    //   title: "Kalendár",
+    //   description: "Digitálna ilustrácia / Vlastné štetce",
+    //   img: "/assets/images/kalendar.png",
+    // },
   ],
 };
 
