@@ -84,11 +84,11 @@ export const portfolio = {
       description: "Website",
       img: "/assets/images/macbook-pro-mockup-light-1.png",
     },
-    {
-      title: "Sustainable horizons",
-      description: "Website",
-      img: "/assets/images/sustainablehorizons.png"
-    }
+    // {
+    //   title: "Sustainable horizons",
+    //   description: "Website",
+    //   img: "/assets/images/sustainablehorizons.png"
+    // }
     // {
     //   title: "Jesličky",
     //   description:

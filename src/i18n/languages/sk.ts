@@ -83,11 +83,11 @@ export const portfolio = {
       description: "Webová stránka",
       img: "/assets/images/macbook-pro-mockup-light-1.png",
     },
-    {
-      title: "Sustainable horizons",
-      description: "webová stránka",
-      img: "/assets/images/sustainablehorizons.png"
-    }
+    // {
+    //   title: "Sustainable horizons",
+    //   description: "webová stránka",
+    //   img: "/assets/images/sustainablehorizons.png"
+    // }
     // {
     //   title: "Jesličky",
     //   description:
